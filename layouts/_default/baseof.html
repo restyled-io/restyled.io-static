@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+
+  <body>
+    <nav>
+      <section>
+        <h1><a href="{{ $.Site.BaseURL }}">restyled</a></h1>
+        <ul></ul>
+      </section>
+    </nav>
+
+    {{ block "main" . }}{{ end }} {{ partial "footer.html" . }}
+  </body>
+</html>
