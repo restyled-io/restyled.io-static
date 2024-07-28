@@ -11,7 +11,7 @@ pre code.hljs {
   padding: 0 !important;
 }
 
-table {
+table, .highlight {
   width: 55ch;
   margin: 0 auto 1em auto;
 }

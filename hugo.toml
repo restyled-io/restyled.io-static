@@ -1,6 +1,7 @@
 baseURL = 'https://restyled.io/'
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses =false
