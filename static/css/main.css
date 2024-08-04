@@ -1,6 +1,8 @@
-/* body { */
-/*   text-align: justify; */
-/* } */
+code {
+  padding: 0;
+  color: #444;
+  background-color: #f3f3f3;
+}
 
 img {
   width: 100%;
@@ -40,11 +42,59 @@ footer {
 
 .red { color: #cc9393; }
 
-.how-it-works-highlight {
-  background: #f0ebee;
-  border-radius: 6px;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  padding-bottom: 1em;
-  padding-top: 1em;
+/*
+ * For available-restylers
+ *
+ */
+pre code.hljs {
+  padding: 0 !important;
+}
+
+table, .highlight {
+  width: 55ch;
+  margin: 0 auto 1em auto;
+}
+
+table tr:first-child > th:first-child {
+  border-radius: 0;
+}
+
+table th {
+  color: inherit;
+  background-color: inherit;
+}
+
+aside#table-of-contents {
+  background-color: #595959;
+  border-radius: unset;
+  color: white;
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 46px; /* height of nav */
+  width: 240px;
+  z-index: 1;
+}
+
+#table-of-contents ul {
+  list-style-type: none;
+  padding-top: 12px;
+}
+
+#table-of-contents a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#main {
+  margin: 0 auto 0 240px;
+}
+
+.test {
+  border-radius: 5px;
+  border: 1px solid #909090;
+  margin: 1em;
+  padding: 0.5rem;
 }
