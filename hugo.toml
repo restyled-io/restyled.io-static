@@ -1,7 +1,10 @@
-baseURL = 'https://restyled.io/'
+baseURL = "https://restyled.io/"
+title = "Restyled"
+
+theme = "restyled"
 
 [markup.goldmark.renderer]
   unsafe = true
 
 [markup.highlight]
-  noClasses =false
+  noClasses = false
