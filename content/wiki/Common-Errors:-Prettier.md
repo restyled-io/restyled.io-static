@@ -1,3 +1,7 @@
+---
+title: "Common Errors: Prettier"
+---
+
 ## JavaScript
 
 ### Cannot find module '@...'

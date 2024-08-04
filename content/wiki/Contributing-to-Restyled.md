@@ -1,3 +1,7 @@
+---
+title: "Contributing to Restyled"
+---
+
 Restyled is built in the open and community contributions are very much encouraged.
 
 ## CLA

@@ -1,3 +1,7 @@
+---
+title: "Applying Fixes Locally"
+---
+
 When Restyled runs, it captures the style fixing commits it makes by running `git format-patch <base>`. The patch is then printed in the logs in a copy/paste-able way:
 
 ```console

@@ -1,3 +1,7 @@
+---
+title: "GitHub Actions Pivot"
+---
+
 I've recently shipped a number of changes to [`restyled-io/restyler`](https://github.com/restyled-io/restyler) and corresponding [`restyled-io/actions`](https://github.com/restyled-io/actions) to make Restyled's primary use-case be within a [GitHub Actions](https://docs.github.com/en/actions) workflow. I'm encouraging all users to migrate to this approach instead of the GitHub Marketplace App and jobs that run on Restyled-maintained infrastructure. Eventually, I plan to decommission that infrastructure and support only GitHub Actions usage. Restyled will no longer be a source-available business with a free offering and paid features; it will just be an open source project. As such, I will likely re-license it AGPL, stop with the CLA, etc.
 
 ## Why

@@ -1,3 +1,7 @@
+---
+title: "Common Errors: Plan Upgrade Required"
+---
+
 If Restyled is run on a private repository, and your plan doesn't allow that, you will receive this error. The error should contain a specific reason (such as having a public-only or limited repositories plan) and, if possible, a URL to upgrade. You can also upgrade your plan at any time on our [GitHub Marketplace Listing](https://github.com/marketplace/restyled-io).
 
 ### GitHub Student Pack Users

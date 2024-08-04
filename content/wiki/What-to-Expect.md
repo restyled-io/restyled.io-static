@@ -1,3 +1,7 @@
+---
+title: "What to Expect"
+---
+
 Whenever you open a Pull Request, Restyled will clone your repository, branch from that branch, and run auto-formatters on any files changed in your original Pull Request.
 
 If differences are found, a new Pull Request is opened and brought to your attention:

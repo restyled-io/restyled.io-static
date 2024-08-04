@@ -1,3 +1,7 @@
+---
+title: "Common Errors: Brittany"
+---
+
 ## Unknown syntactical constructs
 
 ```

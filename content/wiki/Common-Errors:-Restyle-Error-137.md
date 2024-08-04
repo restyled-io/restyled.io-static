@@ -1,3 +1,7 @@
+---
+title: "Common Errors: Restyle Error 137"
+---
+
 When a Job errors stating, "[w]e had trouble with the ... restyler", and:
 
 > Exited non-zero (137) for the following paths

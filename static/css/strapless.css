@@ -907,19 +907,18 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-align: center;
+  /* margin-top: 1em; */
+  /* margin-bottom: 1em; */
+  text-align: left;
   line-height: 1.62;
   font-weight: bold;
 }
-h1:only-child,
-h2:only-child,
-h3:only-child,
-h4:only-child,
-h5:only-child,
-h6:only-child {
-  margin-top: 0;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
 }
 h1 {
   font-size: 2.5em;
@@ -955,7 +954,7 @@ h4 + h1,
 h4 + h2,
 h4 + h3,
 h4 + h4 {
-  margin-top: 0;
+  margin-top: 1em;
 }
 h5,
 h6 {
@@ -1439,17 +1438,20 @@ footer {
   margin: 0 auto 1em auto;
 }
 @media screen and (min-width: 480px) {
-  p,
-  form,
-  article,
-  ul,
-  dl,
-  li,
-  aside,
-  form,
-  footer {
+  .main {
     max-width: 55ch;
   }
+  /* p, */
+  /* form, */
+  /* article, */
+  /* ul, */
+  /* dl, */
+  /* li, */
+  /* aside, */
+  /* form, */
+  /* footer { */
+  /*   max-width: 55ch; */
+  /* } */
 }
 ul {
   margin: 0 auto 2em;

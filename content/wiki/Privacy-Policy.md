@@ -1,3 +1,7 @@
+---
+title: "Privacy Policy"
+---
+
 This privacy policy documents what data Restyled has access to about its users and what Restyled does with it. This policy covers the use of the https://restyled.io website and the Restyled.io GitHub App.
 
 ## Overview

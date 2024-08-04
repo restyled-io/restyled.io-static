@@ -1,11 +1,3 @@
 {{ define "main" }}
-{{ partial "profile.html" . }}
-
-<section id="section">
-    {{ .Content }}
-
-    {{ partial "comment.html" . }}
-</section>
-
-
+{{ .Content }}
 {{ end }}

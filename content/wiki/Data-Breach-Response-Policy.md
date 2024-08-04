@@ -1,3 +1,7 @@
+---
+title: "Data Breach Response Policy"
+---
+
 This document covers Restyled's plan for responding to unauthorized exposure of sensitive data.
 
 ## Ownership and Responsibility

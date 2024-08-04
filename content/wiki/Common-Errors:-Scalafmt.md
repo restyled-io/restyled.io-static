@@ -1,3 +1,7 @@
+---
+title: "Common Errors: Scalafmt"
+---
+
 ## `FailedToFormat` "failed to download"
 
 ```

@@ -1,3 +1,7 @@
+---
+title: "Common Errors: Restyle Error 127"
+---
+
 This means the configured `command` is not available as an executable on `$PATH` within then restyler image.
 
 There are two common reasons for this:

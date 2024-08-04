@@ -1,3 +1,7 @@
+---
+title: "Common Errors: Push Rejected"
+---
+
 ## Stale info
 
 ```

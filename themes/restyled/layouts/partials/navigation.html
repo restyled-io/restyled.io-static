@@ -4,10 +4,13 @@
       {{ if .IsHome }}
       restyled
       {{ else }}
-      <a href="https://restyled.io/">restyled</a><span style="color:#999">{{ .Title}} </span>
+      <a href="https://restyled.io/">restyled</a><span class="title">{{ .Title | lower }} </span>
       {{ end }}
     </h1>
     <ul>
+      <li>
+        <a href="/wiki">Wiki</a>
+      </li>
     </ul>
   </section>
 </nav>

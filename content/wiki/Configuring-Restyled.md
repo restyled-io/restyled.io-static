@@ -1,3 +1,7 @@
+---
+title: "Configuring Restyled"
+---
+
 The restyling process can be configured through a YAML file committed in your repository. Restyled
 will use the first file found at any of the following locations:
 

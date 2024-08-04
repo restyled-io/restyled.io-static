@@ -1,3 +1,7 @@
+---
+title: "Common Errors: Rustfmt"
+---
+
 ## `rustfmt may have failed to format`
 
 Restyled can fail with this error:

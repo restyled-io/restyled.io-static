@@ -1,3 +1,7 @@
+---
+title: "Common Errors: .restyled.yaml"
+---
+
 The general syntax of a configuration error is:
 
 ```

@@ -1,3 +1,7 @@
+---
+title: "Adding a Restyler"
+---
+
 Restylers can be added by anyone through a Pull Request on the `restylers`
 repository. There is no burden of popularity or usefulness. Most Restylers can
 even be configured to run by default, provided they don't conflict with other

@@ -1,3 +1,7 @@
+---
+title: "Running Restyled Locally"
+---
+
 See https://github.com/restyled-io/restyler#readme
 
 <!-- TODO: move this to the above README (and rewrite to make it fit better)

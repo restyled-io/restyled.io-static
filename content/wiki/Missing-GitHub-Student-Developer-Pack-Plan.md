@@ -1,3 +1,7 @@
+---
+title: "Missing GitHub Student Developer Pack Plan"
+---
+
 If you have the [GitHub Student Developer Pack](https://education.github.com/pack) and are not receiving the private repository restyling you expect, please reach out either in [Zulip chat](https://restyled.zulipchat.com) or [via email](mailto:support@restyled.io) with the following information:
 
 1. The GitHub username you logged in as

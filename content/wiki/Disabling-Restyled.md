@@ -1,3 +1,7 @@
+---
+title: "Disabling Restyled"
+---
+
 There are three ways to prevent Restyled from operating on a repository:
 
 1. Commit a [configuration](https://github.com/restyled-io/restyled.io/wiki/Configuration-Reference) in the repository with `enabled: false`

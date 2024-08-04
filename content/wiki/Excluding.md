@@ -1,3 +1,7 @@
+---
+title: "Excluding"
+---
+
 Restyled has two mechanisms for excluding files or folders:
 
 - Globally, via [`exclude`](https://github.com/restyled-io/restyled.io/wiki/Configuring-Restyled#exclude).

@@ -1,3 +1,7 @@
+---
+title: "Disclosing Security Vulnerabilities"
+---
+
 We appreciate anyone who puts effort into identifying and reporting security vulnerabilities. This page documents some commonly-asked questions about how this relates to our project.
 
 ## How do I disclose vulnerabilities?

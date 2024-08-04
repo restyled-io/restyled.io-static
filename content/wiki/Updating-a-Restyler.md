@@ -1,3 +1,7 @@
+---
+title: "Updating a Restyler"
+---
+
 ## How do I know what versions are current?
 
 See https://docs.restyled.io/available-restylers/.

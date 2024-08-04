@@ -1,3 +1,7 @@
+---
+title: "Common Errors: HLint"
+---
+
 ## `parse error on input \8216@\8217`
 
 If the HLint restyler fails, and a message like the following is visible:

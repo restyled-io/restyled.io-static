@@ -1,3 +1,7 @@
+---
+title: "Restyler Info Yaml"
+---
+
 Every Restyler is described by a file at `{name}/info.yaml` in the
 [restylers](https://github.com/restyled-io/restylers) repository. This page
 documents that file.

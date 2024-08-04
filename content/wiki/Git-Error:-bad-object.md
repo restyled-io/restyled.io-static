@@ -1,3 +1,7 @@
+---
+title: "Git Error: bad object"
+---
+
 ## Error Message
 
 ```

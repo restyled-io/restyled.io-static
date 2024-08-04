@@ -1,3 +1,7 @@
+---
+title: "Home"
+---
+
 Restyled is a [CLI](https://github.com/restyled-io/restyler#readme) and corresponding [GitHub Action](https://github.com/restyled-io/actions#readme) for automatically applying style fixes to a Pull Request. It supports over 56 different [_Restylers_](https://docs.restyled.io/available-restylers/), which are thin wrappers over the auto-formatting tools you may already use today.
 
 > [!NOTE]

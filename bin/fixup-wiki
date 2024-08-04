@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+for path in content/wiki/*.md; do
+  base=$(basename "$path")
+  title=$(echo "$base" | sed 's/-/ /g; s/\.md$//')
+
+  echo "Path:  $path"
+  echo "Title: $title"
+
+  {
+    echo "---"
+    echo "title: \"$title\""
+    echo "---"
+    echo
+    cat "$path"
+  } | sponge "$path"
+done
