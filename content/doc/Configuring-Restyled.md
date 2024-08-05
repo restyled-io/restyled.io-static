@@ -134,7 +134,7 @@ Open Restyle PRs?
 comments: false
 ```
 
-:wastebasket: **This feature was removed and this option no longer has any
+🗑️ **This feature was removed and this option no longer has any
 effect**.
 
 ### Pull Request Statuses
@@ -211,7 +211,7 @@ labels:
   - pullassigner-ignore
 ```
 
-:warning: [Labels may not always be respected][labels_caveat].
+⚠️ [Labels may not always be respected][labels_caveat].
 
 ### Ignore Authors
 
@@ -247,7 +247,7 @@ Labels to ignore, supports globs.
 
 PRs labels match any patterns will be ignored by Restyled.
 
-:warning: [Labels may not always be respected][labels_caveat].
+⚠️ [Labels may not always be respected][labels_caveat].
 
 [labels_caveat]:
   https://github.com/restyled-io/restyled.io/wiki/Common-Errors:-Labels-or-Ignore-Labels-not-working

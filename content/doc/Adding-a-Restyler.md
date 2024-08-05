@@ -7,7 +7,7 @@ repository. There is no burden of popularity or usefulness. Most Restylers can
 even be configured to run by default, provided they don't conflict with other
 Restylers that operate on the same file-types.
 
-:hand: *If the Restyler you're planning to add is just a modified version of an
+✋ *If the Restyler you're planning to add is just a modified version of an
 existing one, **don't follow these instructions**. Instead, you can do something
 simpler, called an *override* Restyler. See
 [`prettier-markdown`](https://github.com/restyled-io/restylers/blob/main/prettier-markdown/info.yaml)
