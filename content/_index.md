@@ -6,9 +6,8 @@ takes to read and comprehend code, inconsistent style across a code base can
 hide bugs, often [very][bumblebee] [bad][steam] [ones][apple].
 
 [bumblebee]: https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/issues/123
-[steam]: https://github.com/ValveSoftware/steam-for-linux/issues/3671"
-[apple]:
-  htps://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/
+[steam]: https://github.com/ValveSoftware/steam-for-linux/issues/3671
+[apple]: https://www.synopsys.com/blogs/software-security/understanding-apple-goto-fail-vulnerability-2.html
 
 Great tools exist for almost every language to automatically align code to a
 defined style. Through editor integrations or git pre-commit hooks, a single
