@@ -4,7 +4,7 @@ title: "Git Error: Couldn't find remote ref"
 
 ## Error Message
 
-```
+```console
 fatal: Couldn't find remote ref pull/<number>/head
 ```
 

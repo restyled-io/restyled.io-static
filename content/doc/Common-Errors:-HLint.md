@@ -6,7 +6,7 @@ title: "Common Errors: HLint"
 
 If the HLint restyler fails, and a message like the following is visible:
 
-```
+```console
 refactor: (RealSrcSpan SrcSpanOneLine "./src/Something.hs" 12 33 34,"parse error on input \8216@\8217")
 CallStack (from HasCallStack):
   error, called at src/Refact/Run.hs:190:22 in main:Refact.Run

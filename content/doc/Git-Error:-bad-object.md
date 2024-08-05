@@ -4,11 +4,11 @@ title: "Git Error: bad object"
 
 ## Error Message
 
-```
+```console
 fatal: bad object <sha>
 ```
 
-```
+```console
 readCreateProcess: git "diff" "--name-only" "<sha>" (exit 128): failed error=...
 ```
 

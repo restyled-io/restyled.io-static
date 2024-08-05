@@ -4,7 +4,7 @@ title: "Common Errors: .restyled.yaml"
 
 The general syntax of a configuration error is:
 
-```
+```console
 We had trouble with your configuration:
 Error in <location>: <message>.
 ```

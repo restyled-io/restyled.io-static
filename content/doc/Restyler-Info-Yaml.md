@@ -77,7 +77,7 @@ metadata:
 the actual `Dockerfile` and not manually keep `version` in sync. The
 resulting Docker image we use will be named:
 
-```
+```console
 [{registry}/]restyled/restyler-${name}:${version-or-output-of-version_cmd}
 ```
 

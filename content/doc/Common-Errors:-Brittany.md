@@ -4,7 +4,7 @@ title: "Common Errors: Brittany"
 
 ## Unknown syntactical constructs
 
-```
+```console
 ERROR: encountered unknown syntactical constructs:
 HsSpliceE{}
 ```

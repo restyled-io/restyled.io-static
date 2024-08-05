@@ -6,7 +6,7 @@ title: "Common Errors: Rustfmt"
 
 Restyled can fail with this error:
 
-```
+```console
 error: left behind trailing whitespace
     --> /code/src/lib.rs:1058
      |
