@@ -1,6 +1,5 @@
-baseURL = "https://restyled.io/"
+baseURL = "https://restyledio.netlify.app/"
 title = "Restyled"
-
 theme = "restyled"
 
 [markup.goldmark.renderer]
