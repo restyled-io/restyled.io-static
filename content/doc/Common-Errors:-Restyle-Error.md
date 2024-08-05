@@ -26,7 +26,7 @@ changed_paths:
   outcome: error
 ```
 
-*By default*, if we see a Pull Request with over 1,000 changed files, we will report a Restyling Error.
+_By default_, if we see a Pull Request with over 1,000 changed files, we will report a Restyling Error.
 
 ### What can I do about it?
 
@@ -39,7 +39,7 @@ Anecdotally, Pull Requests with a high quantity of changed files fall into the f
    ```yaml
    changed_paths:
      maximum: 1000
-     outcome: skip  # <--
+     outcome: skip # <--
    ```
 
 1. You've made some bulk changes to not-actually-source files
@@ -52,7 +52,7 @@ Anecdotally, Pull Requests with a high quantity of changed files fall into the f
      - "**/node_modules/**/*"
      - "**/vendor/**/*"
      - ".github/workflows/**/*"
-     - "**/assets/**/*"  # <--
+     - "**/assets/**/*" # <--
    ```
 
    Changes to these files will no longer impact Restyled.
@@ -67,7 +67,7 @@ Anecdotally, Pull Requests with a high quantity of changed files fall into the f
 
    ```yaml
    changed_paths:
-     maximum: 10000  # <--
+     maximum: 10000 # <--
      outcome: error
    ```
 

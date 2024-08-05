@@ -21,9 +21,9 @@ The `location` string is a (perhaps cryptic) attempt at telling you where the er
 Working backwards, `$.restylers[0]` would mean the **0th element** of the **`restylers` key** in the **top-level document**. For example:
 
 ```yaml
-                      # <-- top-level document
-restylers:            # <-- restylers key
-  - stylish_haskell:  # <-- 0th element
+# <-- top-level document
+restylers: # <-- restylers key
+  - stylish_haskell: # <-- 0th element
       include:
         - "**/*.hs"
   - brittany
@@ -44,8 +44,8 @@ The following is a non-exhaustive list of error message you may see, as well as 
 ```yaml
 # Exhibit A
 restylers:
-  - prettier:           # <-- key: the name of a known Restyler
-      include:          # <-- value: an object overriding some of its properties
+  - prettier: # <-- key: the name of a known Restyler
+      include: # <-- value: an object overriding some of its properties
         - "**/*.jsx"
 ```
 
@@ -54,7 +54,7 @@ But we also support fully specifying a `Restyler` directly:
 ```yaml
 # Exhibit B
 restylers:
-  - name: prettier                       # <-- element: flat, complete Restyler object
+  - name: prettier # <-- element: flat, complete Restyler object
     image: restyled/restyler-prettier
     command: [prettier]
     arguments: [--inplace]
@@ -71,7 +71,7 @@ restylers:
       - "**/*.jsx"
 ```
 
-Notice how you *meant* to do _Exhibit A_, but this will parse like _Exhibit B_. The error that results could be confusing because it will talk about `prettier` being an invalid key for a `Restyler` (it is), when the real problem is that `include` needs to be shifted over two characters.
+Notice how you _meant_ to do _Exhibit A_, but this will parse like _Exhibit B_. The error that results could be confusing because it will talk about `prettier` being an invalid key for a `Restyler` (it is), when the real problem is that `include` needs to be shifted over two characters.
 
 The solution is to make sure your indentation is like _Exhibit A_, assuming that's what you meant.
 
@@ -98,7 +98,7 @@ This is invalid because you've not changed the String name into a key,
 
 ```yaml
 restylers:
-  - brittany:  # <- missing ":"
+  - brittany: # <- missing ":"
       include:
         - "**/*.hs"
         - "!src/BadFile.hs"

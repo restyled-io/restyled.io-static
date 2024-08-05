@@ -61,7 +61,7 @@ metadata:
 
 See [here](https://github.com/restyled-io/restyled.io/wiki/Restyler-Info-Yaml) for documentation on this file.
 
-:heavy_check_mark:  It's very important to add `tests`. Since I'm not always familiar with the language, conventions, or other
+:heavy_check_mark: It's very important to add `tests`. Since I'm not always familiar with the language, conventions, or other
 aspects of the auto-formatters we run, we need to have these assertions that it's working as intended when
 you add it and as it's maintained and upgraded over time.
 
@@ -93,7 +93,7 @@ That's it! Open a Pull Request and we'll go from there.
 
 When your change lands in `main`, we will promote them to the `dev` channel.
 This should make it easy for you to use yourself and impact any other
-users who run `dev`.  See [here](https://github.com/restyled-io/restyled.io/wiki/Restyler-Versions)
+users who run `dev`. See [here](https://github.com/restyled-io/restyled.io/wiki/Restyler-Versions)
 for how channels work generally.
 
 On the 1st and 15th of every month, `dev` is promoted to `stable`, releasing your changes to

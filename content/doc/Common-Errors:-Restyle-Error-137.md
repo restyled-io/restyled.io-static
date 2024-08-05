@@ -10,7 +10,6 @@ This means the restyler container was killed by the Docker daemon for exhausting
 
 ## Details
 
-
 ## Reproducing
 
 The following command can be used to run restyler locally, with the memory limits in place:
@@ -44,7 +43,7 @@ If the tool consumes too much memory when invoked with many files, you could red
 3. Skip larger PRs
 
    You can reduce [`changed_paths.maximum`](https://github.com/restyled-io/restyled.io/wiki/Configuring-Restyled#changed-paths) to below the number of files that seems to encounter this error and set `changed_paths.outcome` to `skip`. Note that this will cause the PR to be skipped entirely (not just the problematic restyler).
- 
+
 ## Large file
 
 If the tool consumes too much memory when invoked on a single file, presumably due to its size, you should [exclude it](https://github.com/restyled-io/restyled.io/wiki/Excluding).

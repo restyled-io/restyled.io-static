@@ -124,14 +124,13 @@ comments: false
 
 :wastebasket: **This feature was removed and this option no longer has any effect**.
 
-
 ### Pull Request Statuses
 
 ```yaml
 statuses:
-  skipped: true         # Green when skipped
-  differences: true     # Red when style differences are found
-  no_differences: true  # Green when no differences are found
+  skipped: true # Green when skipped
+  differences: true # Red when style differences are found
+  no_differences: true # Green when no differences are found
 ```
 
 A single value can be used to disable/enable all:
@@ -239,7 +238,6 @@ PRs labels match any patterns will be ignored by Restyled.
 
 ### Restylers version
 
-
 ```yaml
 restylers_version: stable
 ```
@@ -311,7 +309,7 @@ configurations are equivalent:
 
 ```yaml
 restylers:
-  - "!astyle"  # quoting is required for this
+  - "!astyle" # quoting is required for this
   - astyle:
       enabled: false
 ```
@@ -359,7 +357,7 @@ Examples:
     - "*"
   ```
 
-- Run *only* `clang-format`
+- Run _only_ `clang-format`
 
   ```yaml
   restylers:

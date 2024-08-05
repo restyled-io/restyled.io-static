@@ -10,7 +10,7 @@ Restyled can fail with this error:
 error: left behind trailing whitespace
     --> /code/src/lib.rs:1058
      |
-1058 |         // 
+1058 |         //
      |           ^
 
 warning: rustfmt may have failed to format. See previous 1 errors.
@@ -22,7 +22,7 @@ Once `rustfmt` has been fixed, Restyled can update. For now, unfortunately, you 
 
 ## ``expected one of `!`, `)`, `,`, `.`, `::`, `?`, `{`, or an operator, found keyword `move` ``
 
-The `rustfmt` Restyler is built to run the 2015 "edition"*, and constructions only available in the 2018 edition may cause such syntax errors.
+The `rustfmt` Restyler is built to run the 2015 "edition"\*, and constructions only available in the 2018 edition may cause such syntax errors.
 
 The fix is to specify your edition via `arguments`:
 

@@ -4,7 +4,7 @@ title: "Common Errors: Scalafmt"
 
 ## `FailedToFormat` "failed to download"
 
-```
+```console
        org.scalafmt.cli.FailedToFormat: /code/.scalafmt.conf
        Caused by: org.scalafmt.interfaces.ScalafmtException: [...] failed to download
 ```
