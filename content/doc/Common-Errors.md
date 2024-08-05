@@ -66,7 +66,7 @@ This is because the module contains
 which `apply-refact` can't handle.
 
 Unfortunately, the only workaround is to [exclude the file from
-Restyler](https://github.com/restyled-io/restyled.io/wiki/Configuration-Reference#pattern).
+Restyler](/doc/configuration-reference#pattern).
 
 ## Cannot find module '@...'
 
@@ -86,8 +86,8 @@ Restyler image. If you are attempting to use such a package, please open a PR on
 [restyled.io/restylers](https://github.com/restyled-io/restylers).
 
 Restyled also supports [custom Restyler
-images](https://github.com/restyled-io/restyled.io/wiki/Using-a-Custom-Restyler-Image),
-in which you can install whatever software you like.
+images](/doc/using-a-custom-restyler-image), in which you can install whatever
+software you like.
 
 ## "prettier-with-tailwindcss": executable file not found in $PATH
 
@@ -204,8 +204,7 @@ examples, that can help spot such problems.
 
 ---
 
-For more details see the
-[Configuration Reference](https://github.com/restyled-io/restyled.io/wiki/Configuring-Restyled).
+For more details see the [Configuration Reference](/doc/configuring-restyled).
 
 ## Restyle Error 128
 
@@ -221,8 +220,6 @@ will then update the current version of our "manifest" to indicate using that as
 the default `command`. If you're using an older image that lacks that
 executable, you will see this error. The solution is to explicitly configure
 `command` to what it was before, when that image was in use.
-
-[The prettier restyler recently went through this](https://github.com/restyled-io/restyled.io/wiki/Common-Errors:-Prettier#prettier-with-tailwindcss-executable-file-not-found-in-path).
 
 ### 2- You've configured an invalid command yourself
 
@@ -316,10 +313,10 @@ behavior cannot be disabled. We don't allow restylers to make network requests,
 so that attempt fails with the above error.
 
 You can either change your `version` configuration to match our image, or use a
-different image that is the correct version through a
-[Restyler Override](https://github.com/restyled-io/restyled.io/wiki/Configuring-Restyled#restyler-override).
-You can see what images are available on on
-[Docker Hub](https://hub.docker.com/r/restyled/restyler-scalafmt/tags?page=1&name=v).
+different image that is the correct version through a [Restyler
+Override](/doc/configuring-restyled#restyler-override). You can see what images
+are available on on [Docker
+Hub](https://hub.docker.com/r/restyled/restyler-scalafmt/tags?page=1&name=v).
 
 ## Restyled keeps removing `ViewPatterns`
 

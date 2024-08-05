@@ -211,8 +211,6 @@ labels:
   - pullassigner-ignore
 ```
 
-⚠️ [Labels may not always be respected][labels_caveat].
-
 ### Ignore Authors
 
 ```yaml
@@ -246,11 +244,6 @@ ignore_labels:
 Labels to ignore, supports globs.
 
 PRs labels match any patterns will be ignored by Restyled.
-
-⚠️ [Labels may not always be respected][labels_caveat].
-
-[labels_caveat]:
-  https://github.com/restyled-io/restyled.io/wiki/Common-Errors:-Labels-or-Ignore-Labels-not-working
 
 ## Restylers
 
@@ -464,10 +457,8 @@ Valid keys in the _override object_ are:
           tag: v16
   ```
 
-  See
-  [Restyler Versions](https://github.com/restyled-io/restyled.io/wiki/Restyler-Versions#series-images)
-  for more details about so-called "series images", such as the `v16` tag shown
-  above.
+  See [Restyler Versions](/doc/restyler-versions#series-images) for more details
+  about so-called "series images", such as the `v16` tag shown above.
 
 - `command`: string or array of string
 

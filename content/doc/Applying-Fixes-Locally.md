@@ -32,6 +32,5 @@ This feature enables the following workflow:
 - The Restyled PR status is now Green
 
 This workflow is available in all scenarios, though it's particularly useful
-when Restyled is run on a Fork, where it's
-[unable to make sibling PRs](https://github.com/restyled-io/restyled.io/wiki/Common-Errors:-Restyle-PR-not-created#the-original-pr-is-from-a-fork).
-Anyone who finds this easier should take advantage!
+when Restyled is run on a Fork, where it's unable to make sibling PRs. But
+anyone who finds this easier should take advantage!
