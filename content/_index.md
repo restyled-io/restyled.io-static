@@ -1,5 +1,3 @@
-# Restyled
-
 **Style is important**. Any time there's more than one way to do something in
 code, inconsistencies will creep in. Besides measurably adding to the time it
 takes to read and comprehend code, inconsistent style across a code base can
