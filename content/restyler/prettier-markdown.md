@@ -1,0 +1,50 @@
+---
+title: prettier-markdown
+---
+
+> **Version**: v3.3.3-2
+
+This [Restyler][source] operates on **Markdown**, and will run automatically
+
+## Configuration
+
+```yaml
+  image: restyled/restyler-prettier:v3.3.3-2
+  command: ["prettier-with-tailwindcss", "--write"]
+  arguments: []
+  include: ["**/*.md", "**/*.markdown"]
+  interpreters: []
+```
+
+## Examples
+
+**Before**
+
+```markdown
+Voilà! In view, a humble vaudevillian veteran cast vicariously as both victim and villain by the vicissitudes of Fate. This visage, no mere veneer of vanity, is a vestige of the vox populi, now vacant, vanished. However, this valourous visitation of a bygone vexation stands vivified and has vowed to vanquish these venal and virulent vermin vanguarding vice and vouchsafing the violently vicious and voracious violation of volition! The only verdict is vengeance; a vendetta held as a votive, not in vain, for the value and veracity of such shall one day vindicate the vigilant and the virtuous. Verily, this vichyssoise of verbiage veers most verbose, so let me simply add that it's my very good honour to meet you and you may call me V.
+
+```
+
+**After**
+
+```markdown
+Voilà! In view, a humble vaudevillian veteran cast vicariously as both victim
+and villain by the vicissitudes of Fate. This visage, no mere veneer of vanity,
+is a vestige of the vox populi, now vacant, vanished. However, this valourous
+visitation of a bygone vexation stands vivified and has vowed to vanquish these
+venal and virulent vermin vanguarding vice and vouchsafing the violently vicious
+and voracious violation of volition! The only verdict is vengeance; a vendetta
+held as a votive, not in vain, for the value and veracity of such shall one day
+vindicate the vigilant and the virtuous. Verily, this vichyssoise of verbiage
+veers most verbose, so let me simply add that it's my very good honour to meet
+you and you may call me V.
+
+```
+
+
+## Documentation
+
+- https://prettier.io/blog/2017/11/07/1.8.0.html
+- https://prettier.io/docs/en/index.html
+
+[source]: https://github.com/restyled-io/restylers/blob/main/prettier-markdown/info.yaml
