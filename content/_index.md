@@ -1,7 +1,3 @@
----
-title: home
----
-
 # Restyled
 
 **Style is important**. Any time there's more than one way to do something in
