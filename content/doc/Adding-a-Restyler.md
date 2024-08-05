@@ -19,7 +19,7 @@ as examples that override the `prettier` Restyler.*
 
 1. `git`
 1. Docker
-1. The [Restyled SDK](https://github.com/restyled-io/sdk#installation)
+1. Haskell tool-chain (to run tests)
 
 To get started, check out the `restyled-io/restylers`, repository:
 
@@ -89,7 +89,7 @@ CMD ["bananas"]
 Build (and lint) the Docker image and run the tests:
 
 ```console
-restyled restylers bananas
+./bin/test bananas
 ```
 
 **NOTE**: if this doesn't work, and you can't make it work, please still submit
