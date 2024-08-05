@@ -51,30 +51,3 @@ jobs:
           title: ${{ restyler.outputs.restyled-title }}
           body: ${{ restyler.outputs.restyled-body }}
 ```
-
----
-
-Open a Pull Request that changes files in one of our [many, many supported
-languages][available-restylers]. If it doesn't conform to your preferred style,
-a status check will fail and point to another Pull Request where it's been
-_restyled_:
-
-[available-restylers]: https://docs.restyled.io/available-restylers/
-
-![](https://restyled.io/static/img/docs/differences-status.png)
-
-Click through to see what tools corrected your style:
-
-![](https://restyled.io/static/img/docs/minor-details.png)
-
-Review the differences:
-
-![](https://restyled.io/static/img/docs/minor-differences.png)
-
-And, if you like, merge them back into yours.
-
-![](https://restyled.io/static/img/docs/merge-button.png)
-
-Rejoice in your consistent style and green status!
-
-![](https://restyled.io/static/img/docs/minor-success.png)
