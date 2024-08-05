@@ -1,6 +1,7 @@
 # Hugo Theme Mini
 
-English | [简体中文](https://github.com/nodejh/hugo-theme-mini/tree/master/README-zh_CN.md)
+English |
+[简体中文](https://github.com/nodejh/hugo-theme-mini/tree/master/README-zh_CN.md)
 
 A fast, minimalist and responsive hugo theme.
 
@@ -21,15 +22,19 @@ Features:
 
 ### As a Hugo Module (recommended)
 
-> ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform), you may not have Go installed on your machine. To check if Go is installed:
+> ⚠️ If you installed a
+> [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform),
+> you may not have Go installed on your machine. To check if Go is installed:
 >
 > ```
 > $ go version
 > ```
 >
-> Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/).
+> Go modules were considered production ready in v1.14.
+> [Download Go](https://golang.org/dl/).
 
-1. From your project's root directory, initiate the hugo module system if you haven't already:
+1. From your project's root directory, initiate the hugo module system if you
+   haven't already:
 
    ```bash
    $ hugo mod init github.com/<your_user>/<your_project>
@@ -56,15 +61,24 @@ Features:
    theme: mini
    ```
 
-For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
+For more information read the official
+[setup guide](//gohugo.io/overview/installing/) of Hugo.
 
 ## Getting started
 
-After installing the theme successfully it requires a just a few more steps to get your site running.
+After installing the theme successfully it requires a just a few more steps to
+get your site running.
 
 ### The config file
 
-Take a look inside the [`exampleSite`](https://github.com/nodejh/hugo-theme-mini/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml). To use it, copy the [`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
+Take a look inside the
+[`exampleSite`](https://github.com/nodejh/hugo-theme-mini/tree/master/exampleSite)
+folder of this theme. You'll find a file called
+[`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml).
+To use it, copy the
+[`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml)
+in the root folder of your Hugo site. Feel free to change the strings in this
+theme.
 
 > ⚠️ You may need to delete the line: `themesDir: ../../`
 
@@ -94,7 +108,10 @@ To enable google analytics, add following to your config file:
 
 ### Logo and favicon
 
-You can replace the log in the top of each page and favicon with your own images. To do that put your own logo and favicon into the `images` directory of your website static directory, then named them `avatar.png` and `favicon.ico`. For example:
+You can replace the log in the top of each page and favicon with your own
+images. To do that put your own logo and favicon into the `images` directory of
+your website static directory, then named them `avatar.png` and `favicon.ico`.
+For example:
 
 ```
 - content

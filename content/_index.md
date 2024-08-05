@@ -11,7 +11,8 @@ hide bugs, often [very][bumblebee] [bad][steam] [ones][apple].
 
 [bumblebee]: https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/issues/123
 [steam]: https://github.com/ValveSoftware/steam-for-linux/issues/3671"
-[apple]: htps://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/
+[apple]:
+  htps://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/
 
 Great tools exist for almost every language to automatically align code to a
 defined style. Through editor integrations or git pre-commit hooks, a single

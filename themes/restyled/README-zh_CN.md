@@ -1,6 +1,7 @@
 # Hugo Theme Mini
 
-[English](https://github.com/nodejh/hugo-theme-mini/tree/master/README.md) | 简体中文
+[English](https://github.com/nodejh/hugo-theme-mini/tree/master/README.md) | 简
+体中文
 
 一个简约的响应式 Hugo 主题。
 
@@ -21,7 +22,10 @@
 
 ### 使用 Hugo 模块安装 (推荐)
 
-> ⚠️ 如果你使用的是 [二进制包](https://gohugo.io/getting-started/installing/#binary-cross-platform) 安装的 Hugo, 那么你需要在电脑上安装 Go 语言. 你可以使用下面的命令检查是否安装 Go:
+> ⚠️ 如果你使用的是
+> [二进制包](https://gohugo.io/getting-started/installing/#binary-cross-platform)
+> 安装的 Hugo, 那么你需要在电脑上安装 Go 语言. 你可以使用下面的命令检查是否安装
+> Go:
 >
 > ```
 > $ go version
@@ -64,9 +68,21 @@
 
 ### 修改配置文件
 
-在 [`exampleSite`](https://github.com/nodejh/hugo-theme-mini/tree/master/exampleSite) 目录中有一个 [`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml) 的配置文件，你可以将其复制到你的项目根目录中，将一些配置项修改为你的配置。这些配置都可以随意修改。
+在
+[`exampleSite`](https://github.com/nodejh/hugo-theme-mini/tree/master/exampleSite)
+目录中有一个
+[`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml)
+的配置文件，你可以将其复制到你的项目根目录中，将一些配置项修改为你的配置。这些配
+置都可以随意修改。
 
-Take a look inside the [`exampleSite`](https://github.com/nodejh/hugo-theme-mini/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml). To use it, copy the [`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
+Take a look inside the
+[`exampleSite`](https://github.com/nodejh/hugo-theme-mini/tree/master/exampleSite)
+folder of this theme. You'll find a file called
+[`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml).
+To use it, copy the
+[`config.yaml`](https://github.com/nodejh/hugo-theme-mini/blob/master/exampleSite/config.yaml)
+in the root folder of your Hugo site. Feel free to change the strings in this
+theme.
 
 > ⚠️ 你需要删除这行配置: `themesDir: ../../`
 
@@ -96,7 +112,8 @@ Take a look inside the [`exampleSite`](https://github.com/nodejh/hugo-theme-mini
 
 ### Logo 和 favicon
 
-你可以替换网站中的 Log 和 favicon，只需要将你的图片放在网站的 `static/images` 中，并分别命名为 `avatar.png` 和 `avicon.ico`. 下面是项目目录示例:
+你可以替换网站中的 Log 和 favicon，只需要将你的图片放在网站的 `static/images`
+中，并分别命名为 `avatar.png` 和 `avicon.ico`. 下面是项目目录示例:
 
 ```
 - content

@@ -72,15 +72,15 @@ metadata:
 | `metadata.tests[].contents`         | `string`        | **required**  | Content to be restyled as the test                                                                                                                               |
 | `metadata.tests[].restyled`         | `string`        | **required**  | Expected content after restyling                                                                                                                                 |
 
-\* One of `version_cmd`, `version` is required. If possible, using
-`version_cmd` is better because it means all you have to do is update
-the actual `Dockerfile` and not manually keep `version` in sync. The
-resulting Docker image we use will be named:
+\* One of `version_cmd`, `version` is required. If possible, using `version_cmd`
+is better because it means all you have to do is update the actual `Dockerfile`
+and not manually keep `version` in sync. The resulting Docker image we use will
+be named:
 
 ```console
 [{registry}/]restyled/restyler-${name}:${version-or-output-of-version_cmd}
 ```
 
-\**: A `tests[].support` file will be present for *all* test cases if
-*any\* test case defines it. This is just a historical accident that we've
-yet to correct.
+\**: A `tests[].support` file will be present for *all* test cases if *any\*
+test case defines it. This is just a historical accident that we've yet to
+correct.

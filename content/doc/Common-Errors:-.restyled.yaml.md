@@ -11,14 +11,18 @@ Error in <location>: <message>.
 
 ## Location
 
-The `location` string is a (perhaps cryptic) attempt at telling you where the error was encountered:
+The `location` string is a (perhaps cryptic) attempt at telling you where the
+error was encountered:
 
-- `<location>[<index>]` means the element at index `<index>` of an array located at `<location>`
-- `<location>[<name>]` means the `<name>` key of an object located at `<location>`
+- `<location>[<index>]` means the element at index `<index>` of an array located
+  at `<location>`
+- `<location>[<name>]` means the `<name>` key of an object located at
+  `<location>`
 - Depending on the error, the above may also appear as `<location>.<name>`
 - `$` means the top-level document
 
-Working backwards, `$.restylers[0]` would mean the **0th element** of the **`restylers` key** in the **top-level document**. For example:
+Working backwards, `$.restylers[0]` would mean the **0th element** of the
+**`restylers` key** in the **top-level document**. For example:
 
 ```yaml
 # <-- top-level document
@@ -33,7 +37,8 @@ And a similar error may use `$['restylers'][0]` for that location.
 
 ## Messages
 
-The following is a non-exhaustive list of error message you may see, as well as potential causes and solutions.
+The following is a non-exhaustive list of error message you may see, as well as
+potential causes and solutions.
 
 ### Did you intend to specify a full Restyler object...
 
@@ -62,7 +67,10 @@ restylers:
     # more keys...
 ```
 
-Normally, this feature is only known to Restyled contributors who may use it to try out custom Restylers or non-default features not directly supported in the named-override syntax. The problem is it's **super easy** to accidentally do this:
+Normally, this feature is only known to Restyled contributors who may use it to
+try out custom Restylers or non-default features not directly supported in the
+named-override syntax. The problem is it's **super easy** to accidentally do
+this:
 
 ```yaml
 restylers:
@@ -71,13 +79,20 @@ restylers:
       - "**/*.jsx"
 ```
 
-Notice how you _meant_ to do _Exhibit A_, but this will parse like _Exhibit B_. The error that results could be confusing because it will talk about `prettier` being an invalid key for a `Restyler` (it is), when the real problem is that `include` needs to be shifted over two characters.
+Notice how you _meant_ to do _Exhibit A_, but this will parse like _Exhibit B_.
+The error that results could be confusing because it will talk about `prettier`
+being an invalid key for a `Restyler` (it is), when the real problem is that
+`include` needs to be shifted over two characters.
 
-The solution is to make sure your indentation is like _Exhibit A_, assuming that's what you meant.
+The solution is to make sure your indentation is like _Exhibit A_, assuming
+that's what you meant.
 
 ### Mapping values are not allowed in this context
 
-This error basically means you've started to define an Object (key-values) in a place where that's not expected or allowed by the Yaml syntax. The most common reason for this is when you take a configuration naming Restylers as String names:
+This error basically means you've started to define an Object (key-values) in a
+place where that's not expected or allowed by the Yaml syntax. The most common
+reason for this is when you take a configuration naming Restylers as String
+names:
 
 ```yaml
 restylers:
@@ -104,8 +119,10 @@ restylers:
         - "!src/BadFile.hs"
 ```
 
-If you pay careful attention to the syntax highlighting differences in these two examples, that can help spot such problems.
+If you pay careful attention to the syntax highlighting differences in these two
+examples, that can help spot such problems.
 
 ---
 
-For more details see the [Configuration Reference](https://github.com/restyled-io/restyled.io/wiki/Configuring-Restyled).
+For more details see the
+[Configuration Reference](https://github.com/restyled-io/restyled.io/wiki/Configuring-Restyled).

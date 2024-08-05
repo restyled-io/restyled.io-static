@@ -7,7 +7,13 @@ repository. There is no burden of popularity or usefulness. Most Restylers can
 even be configured to run by default, provided they don't conflict with other
 Restylers that operate on the same file-types.
 
-:hand: *If the Restyler you're planning to add is just a modified version of an existing one, **don't follow these instructions**. Instead, you can do something simpler, called an *override* Restyler. See [`prettier-markdown`](https://github.com/restyled-io/restylers/blob/main/prettier-markdown/info.yaml) and [`prettier-yaml`](https://github.com/restyled-io/restylers/blob/main/prettier-yaml/info.yaml) as examples that override the `prettier` Restyler.*
+:hand: *If the Restyler you're planning to add is just a modified version of an
+existing one, **don't follow these instructions**. Instead, you can do something
+simpler, called an *override* Restyler. See
+[`prettier-markdown`](https://github.com/restyled-io/restylers/blob/main/prettier-markdown/info.yaml)
+and
+[`prettier-yaml`](https://github.com/restyled-io/restylers/blob/main/prettier-yaml/info.yaml)
+as examples that override the `prettier` Restyler.*
 
 ## Prerequisites
 
@@ -59,11 +65,13 @@ metadata:
         Hi, here are some bananas.
 ```
 
-See [here](https://github.com/restyled-io/restyled.io/wiki/Restyler-Info-Yaml) for documentation on this file.
+See [here](https://github.com/restyled-io/restyled.io/wiki/Restyler-Info-Yaml)
+for documentation on this file.
 
-:heavy_check_mark: It's very important to add `tests`. Since I'm not always familiar with the language, conventions, or other
-aspects of the auto-formatters we run, we need to have these assertions that it's working as intended when
-you add it and as it's maintained and upgraded over time.
+:heavy_check_mark: It's very important to add `tests`. Since I'm not always
+familiar with the language, conventions, or other aspects of the auto-formatters
+we run, we need to have these assertions that it's working as intended when you
+add it and as it's maintained and upgraded over time.
 
 **./bananas/Dockerfile**:
 
@@ -92,24 +100,36 @@ That's it! Open a Pull Request and we'll go from there.
 ## When will you see your changes?
 
 When your change lands in `main`, we will promote them to the `dev` channel.
-This should make it easy for you to use yourself and impact any other
-users who run `dev`. See [here](https://github.com/restyled-io/restyled.io/wiki/Restyler-Versions)
-for how channels work generally.
+This should make it easy for you to use yourself and impact any other users who
+run `dev`. See
+[here](https://github.com/restyled-io/restyled.io/wiki/Restyler-Versions) for
+how channels work generally.
 
-On the 1st and 15th of every month, `dev` is promoted to `stable`, releasing your changes to
-our entire user base.
+On the 1st and 15th of every month, `dev` is promoted to `stable`, releasing
+your changes to our entire user base.
 
 ## Examples
 
-The following are Restylers that wrap tools in certain languages. They can be good examples if you
-are trying to build a Restyler for a tool that is built or installed similarly.
+The following are Restylers that wrap tools in certain languages. They can be
+good examples if you are trying to build a Restyler for a tool that is built or
+installed similarly.
 
-- Python (pip): [autopep8](https://github.com/restyled-io/restylers/blob/main/autopep8/Dockerfile)
-- Haskell (stack): [brittany](https://github.com/restyled-io/restylers/blob/main/brittany/Dockerfile)
-- Haskell (nix): [dhall](https://github.com/restyled-io/restylers/blob/main/dhall/Dockerfile)
-- JavaScript (npm) [prettier](https://github.com/restyled-io/restylers/blob/main/prettier/Dockerfile)
-- Rust (rustup): [rustfmt](https://github.com/restyled-io/restylers/blob/main/rustfmt/Dockerfile)
-- Rust (cargo): [shellharden](https://github.com/restyled-io/restylers/blob/main/shellharden/Dockerfile)
-- Go (go install): [shfmt](https://github.com/restyled-io/restylers/blob/main/shfmt/Dockerfile)
-- Ruby (bundle): [standardrb](https://github.com/restyled-io/restylers/blob/main/standardrb/Dockerfile)
-- 3rd-party image: [whitespace](https://github.com/restyled-io/restylers/blob/main/whitespace/info.yaml) ([source](https://github.com/restyled-io/restyler-whitespace))
+- Python (pip):
+  [autopep8](https://github.com/restyled-io/restylers/blob/main/autopep8/Dockerfile)
+- Haskell (stack):
+  [brittany](https://github.com/restyled-io/restylers/blob/main/brittany/Dockerfile)
+- Haskell (nix):
+  [dhall](https://github.com/restyled-io/restylers/blob/main/dhall/Dockerfile)
+- JavaScript (npm)
+  [prettier](https://github.com/restyled-io/restylers/blob/main/prettier/Dockerfile)
+- Rust (rustup):
+  [rustfmt](https://github.com/restyled-io/restylers/blob/main/rustfmt/Dockerfile)
+- Rust (cargo):
+  [shellharden](https://github.com/restyled-io/restylers/blob/main/shellharden/Dockerfile)
+- Go (go install):
+  [shfmt](https://github.com/restyled-io/restylers/blob/main/shfmt/Dockerfile)
+- Ruby (bundle):
+  [standardrb](https://github.com/restyled-io/restylers/blob/main/standardrb/Dockerfile)
+- 3rd-party image:
+  [whitespace](https://github.com/restyled-io/restylers/blob/main/whitespace/info.yaml)
+  ([source](https://github.com/restyled-io/restyler-whitespace))

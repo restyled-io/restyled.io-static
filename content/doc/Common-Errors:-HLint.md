@@ -12,6 +12,9 @@ CallStack (from HasCallStack):
   error, called at src/Refact/Run.hs:190:22 in main:Refact.Run
 ```
 
-This is because the module contains [`TypeApplications`](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-TypeApplications), which `apply-refact` can't handle.
+This is because the module contains
+[`TypeApplications`](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-TypeApplications),
+which `apply-refact` can't handle.
 
-Unfortunately, the only workaround is to [exclude the file from Restyler](https://github.com/restyled-io/restyled.io/wiki/Configuration-Reference#pattern).
+Unfortunately, the only workaround is to
+[exclude the file from Restyler](https://github.com/restyled-io/restyled.io/wiki/Configuration-Reference#pattern).

@@ -2,22 +2,33 @@
 title: "Configuring Restyled"
 ---
 
-The restyling process can be configured through a YAML file committed in your repository. Restyled
-will use the first file found at any of the following locations:
+The restyling process can be configured through a YAML file committed in your
+repository. Restyled will use the first file found at any of the following
+locations:
 
 - `.restyled.yaml`
 - `.restyled.yml`
 - `.github/restyled.yaml`
 - `.github/restyled.yml`
 
-The contents of that file are documented here. The current default configuration is available [here](https://github.com/restyled-io/restyler/blob/main/config/default.yaml). Any differences or additional notes in that source file take precedence over what's described in this wiki page. When referring to the file, we use `.restyled.yaml` -- but of course this documentation applies regardless of location.
+The contents of that file are documented here. The current default configuration
+is available
+[here](https://github.com/restyled-io/restyler/blob/main/config/default.yaml).
+Any differences or additional notes in that source file take precedence over
+what's described in this wiki page. When referring to the file, we use
+`.restyled.yaml` -- but of course this documentation applies regardless of
+location.
 
-The `.restyled.yaml` **in the branch being Restyled** is what is used. If you make a configuration change on another branch (e.g. `main`), you will need to bring that change into any open Pull Requests (e.g. rebase) before Restyled will see it there.
+The `.restyled.yaml` **in the branch being Restyled** is what is used. If you
+make a configuration change on another branch (e.g. `main`), you will need to
+bring that change into any open Pull Requests (e.g. rebase) before Restyled will
+see it there.
 
 ## General notes
 
 - All keys are optional and default values begin each section below
-- All list values can also be given a single value, to indicate a single-element list.
+- All list values can also be given a single value, to indicate a single-element
+  list.
 
 ## Core Configuration
 
@@ -41,9 +52,9 @@ exclude:
 
 Patterns to exclude from all Restylers.
 
-By default, we ignore directories that are often checked-in but rarely
-represent project code. Some globs are slightly complicated to match paths
-within directories of names appearing at any depth.
+By default, we ignore directories that are often checked-in but rarely represent
+project code. Some globs are slightly complicated to match paths within
+directories of names appearing at any depth.
 
 This behavior can be disabled in your project with:
 
@@ -53,8 +64,8 @@ exclude: []
 
 ### Also Exclude
 
-If you wish to exclude patterns while retaining our default `exclude`, add
-them to `also_exclude` instead.
+If you wish to exclude patterns while retaining our default `exclude`, add them
+to `also_exclude` instead.
 
 ```yaml
 also_exclude: []
@@ -68,7 +79,8 @@ changed_paths:
   outcome: error
 ```
 
-Pull Requests with too many changed paths will not be restyled. The limit is controlled by the `maximum` key and `outcome` can either be `error` or `skip`.
+Pull Requests with too many changed paths will not be restyled. The limit is
+controlled by the `maximum` key and `outcome` can either be `error` or `skip`.
 
 ### Remote files
 
@@ -122,7 +134,8 @@ Open Restyle PRs?
 comments: false
 ```
 
-:wastebasket: **This feature was removed and this option no longer has any effect**.
+:wastebasket: **This feature was removed and this option no longer has any
+effect**.
 
 ### Pull Request Statuses
 
@@ -141,7 +154,9 @@ statuses: false
 
 Or separate values as shown in the defaults.
 
-Note that PR statuses are always sent on errors. This is because errors may occur (and are always handled) outside of the repository clone operation, so we are unable to use the in-repository configuration from this logic.
+Note that PR statuses are always sent on errors. This is because errors may
+occur (and are always handled) outside of the repository clone operation, so we
+are unable to use the in-repository configuration from this logic.
 
 ### Review requests
 
@@ -162,7 +177,8 @@ One value will apply to both origin and forked PRs:
 request_review: author
 ```
 
-Or you can specify separate values. If you specify only one, the other is defaulted as shown:
+Or you can specify separate values. If you specify only one, the other is
+defaulted as shown:
 
 ```yaml
 request_review:
@@ -206,7 +222,8 @@ ignore_authors:
 
 Authors to ignore, supports globs.
 
-PRs opened by authors whose login matches any patterns will be ignored by Restyled.
+PRs opened by authors whose login matches any patterns will be ignored by
+Restyled.
 
 ### Ignore Branches
 
@@ -232,7 +249,8 @@ PRs labels match any patterns will be ignored by Restyled.
 
 :warning: [Labels may not always be respected][labels_caveat].
 
-[labels_caveat]: https://github.com/restyled-io/restyled.io/wiki/Common-Errors:-Labels-or-Ignore-Labels-not-working
+[labels_caveat]:
+  https://github.com/restyled-io/restyled.io/wiki/Common-Errors:-Labels-or-Ignore-Labels-not-working
 
 ## Restylers
 
@@ -245,8 +263,9 @@ restylers_version: stable
 Version of the set of Restylers to run.
 
 This name corresponds to a manifest at (e.g.)
-https://docs.restyled.io/data-files/restylers/manifests/stable/restylers.yaml. Feel free
-to specify `dev` to get new versions more quickly, but `stable` does not lag far behind.
+https://docs.restyled.io/data-files/restylers/manifests/stable/restylers.yaml.
+Feel free to specify `dev` to get new versions more quickly, but `stable` does
+not lag far behind.
 
 ### Restylers
 
@@ -284,8 +303,8 @@ Elements in this list can be specified in one of three forms:
          - "**/*.js"
    ```
 
-All three of the above are equivalent. The latter two are useful if you want
-to run the same Restyler multiple ways:
+All three of the above are equivalent. The latter two are useful if you want to
+run the same Restyler multiple ways:
 
 ```yaml
 restylers:
@@ -301,11 +320,11 @@ restylers:
 Omitted keys inherit defaults for the Restyler of that name, which can be seen
 in [Available Restylers](https://docs.restyled.io/available-restylers/).
 
-Note that the `enabled` key is not inherited. Adding an item to this list, without specifying
-`enabled: false`, automatically enables that Restyler.
+Note that the `enabled` key is not inherited. Adding an item to this list,
+without specifying `enabled: false`, automatically enables that Restyler.
 
-In string form, prefixing the name with `!` is short-hand for disabling. The following two
-configurations are equivalent:
+In string form, prefixing the name with `!` is short-hand for disabling. The
+following two configurations are equivalent:
 
 ```yaml
 restylers:
@@ -316,16 +335,18 @@ restylers:
 
 #### Wildcard
 
-The special value `*` (wildcard) means _all Restylers not configured_. One wildcard
-may be placed anywhere in the `restylers` list and remaining Restylers will be run,
-with their default values, at that point.
+The special value `*` (wildcard) means _all Restylers not configured_. One
+wildcard may be placed anywhere in the `restylers` list and remaining Restylers
+will be run, with their default values, at that point.
 
-Note that the Restylers added by the `*` entry will not run if they're default configuration
-includes `enabled: false`. You must explicitly add such Restylers for them to run.
+Note that the Restylers added by the `*` entry will not run if they're default
+configuration includes `enabled: false`. You must explicitly add such Restylers
+for them to run.
 
 Examples:
 
-- Just run all Restylers with default values, i.e. the default configuration value
+- Just run all Restylers with default values, i.e. the default configuration
+  value
 
   ```yaml
   restylers:
@@ -392,9 +413,9 @@ Valid keys in the _override object_ are:
 
 - `enabled`: true|false
 
-  Restylers present in the list are considered enabled and those not in the
-  list are considered not enabled, however this key is an explicit way to
-  disable a Restyler without removing it from the list (e.g. temporarily).
+  Restylers present in the list are considered enabled and those not in the list
+  are considered not enabled, however this key is an explicit way to disable a
+  Restyler without removing it from the list (e.g. temporarily).
 
 - `arguments`: string or array of string
 
@@ -404,8 +425,8 @@ Valid keys in the _override object_ are:
 
   Pattern(s) to match files that should be Restyled.
 
-  **NOTE**: these are processed in order, so be careful you don't accidentally do
-  something like:
+  **NOTE**: these are processed in order, so be careful you don't accidentally
+  do something like:
 
   ```yaml
   - "!/bad-file.hs"
@@ -417,13 +438,13 @@ Valid keys in the _override object_ are:
 
 - `interpreters`: interpreter or array of interpreters
 
-  Extension-less files will be Restyled if they match interpreter(s) given
-  here. Valid values are `sh`, `bash`, `python`, and `ruby`.
+  Extension-less files will be Restyled if they match interpreter(s) given here.
+  Valid values are `sh`, `bash`, `python`, and `ruby`.
 
 - `image`: string|object
 
-  The Docker image to run. Can be anything publicly pull-able. This can be
-  a full image, or you can override individual parts.
+  The Docker image to run. Can be anything publicly pull-able. This can be a
+  full image, or you can override individual parts.
 
   ```yaml
   restylers:
@@ -443,8 +464,10 @@ Valid keys in the _override object_ are:
           tag: v16
   ```
 
-  See [Restyler Versions](https://github.com/restyled-io/restyled.io/wiki/Restyler-Versions#series-images) for
-  more details about so-called "series images", such as the `v16` tag shown above.
+  See
+  [Restyler Versions](https://github.com/restyled-io/restyled.io/wiki/Restyler-Versions#series-images)
+  for more details about so-called "series images", such as the `v16` tag shown
+  above.
 
 - `command`: string or array of string
 
