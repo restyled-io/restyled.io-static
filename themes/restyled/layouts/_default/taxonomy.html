@@ -2,7 +2,7 @@
 {{ partial "profile.html" . }}
 
 <section id="archive">
-   
+
     {{ range .Data.Pages.GroupByDate "2006" }}
         <div class="group">
             <h3 class="key">
@@ -28,7 +28,7 @@
                       {{ end}}
                   </div>
                 </div>
-            {{ end }}          
+            {{ end }}
         </div>
 
     {{ end }}
