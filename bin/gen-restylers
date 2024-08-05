@@ -1,0 +1,103 @@
+#!/usr/bin/env ruby
+require "yaml"
+require "ostruct"
+
+def restyler_md(restyler)
+  lang = restyler.metadata.languages.first
+  langs = restyler.metadata.languages.map { "**#{_1}**" }
+
+  <<~EOM
+    ---
+    title: #{restyler.name}
+    ---
+
+    > **Version**: #{restyler.image.split(":").last}
+
+    This [Restyler][source] operates on #{sentence(langs)}, #{restyler.enabled ? "and will run automatically" : "but it must be explicitly enabled "}
+
+    ## Configuration
+
+    ```yaml
+      image: #{restyler.image}
+      command: #{restyler.command}
+      arguments: #{restyler.arguments}
+      include: #{restyler.include}
+      interpreters: #{restyler.interpreters}
+    ```
+
+    ## Examples
+
+    #{restyler.metadata.tests.map { test_template(lang, _1) }.join("\n")}
+
+    ## Documentation
+
+    - #{restyler.documentation.join("\n- ")}
+
+    [source]: https://github.com/restyled-io/restylers/blob/main/#{restyler.name}/info.yaml
+  EOM
+end
+
+def test_template(lang, test)
+  clazz = lang_class(lang);
+
+  <<~EOM
+  **Before**
+
+  ```#{clazz}
+  #{test.contents}
+  ```
+
+  **After**
+
+  ```#{clazz}
+  #{test.restyled}
+  ```
+  EOM
+end
+
+def lang_class(lang)
+  if lang.nil?
+    return "console";
+  end
+
+  case lang
+  when "*" then "console"
+
+  # No support in highlight.js
+  when "Dhall" then "console"
+  when "GN" then "console"
+  when "Terraform" then "console"
+
+  # Present as another name
+  when "C#" then "csharp"
+  when "F#" then "fsharp"
+  when "POSIX sh" then "bash"
+  when "PSQL" then "postgresql"
+  when "System Verilog" then "verilog"
+
+  # Most can work by just lowercasing
+  else "#{lang.downcase}"
+  end
+end
+
+def sentence(items)
+  case items.length
+  when 1 then items[0]
+  when 2 then "#{items[0]} and #{items[1]}"
+  else "#{items[0...-1].join(", ")} and #{items[-1]}"
+  end
+end
+
+manifest_url = "https://docs.restyled.io/data-files/restylers/manifests/stable/restylers.yaml"
+manifest_src = `curl -sSf -L #{manifest_url}`
+
+restylers = YAML.safe_load(manifest_src).map do |yaml|
+  s = OpenStruct.new(yaml)
+  s.metadata = OpenStruct.new(s.metadata)
+  s.metadata.tests = s.metadata.tests.map { OpenStruct.new(_1) }
+  s
+end
+
+restylers.each do |r|
+  File.write("content/restyler/#{r.name}.md", restyler_md(r))
+end
