@@ -24,6 +24,10 @@ footer {
   text-align: center;
 }
 
+.anchor {
+  font-size: 75%
+}
+
 .large {
   font-size: 120%;
 }
