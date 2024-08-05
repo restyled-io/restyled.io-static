@@ -4,7 +4,7 @@ title = "Restyled"
 theme = "restyled"
 
 [markup.goldmark.renderer]
-  unsafe = true
+unsafe = true
 
 [markup.highlight]
-  noClasses = false
+noClasses = false
