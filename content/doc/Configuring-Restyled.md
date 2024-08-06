@@ -71,17 +71,6 @@ to `also_exclude` instead.
 also_exclude: []
 ```
 
-### Changed paths
-
-```yaml
-changed_paths:
-  maximum: 1000
-  outcome: error
-```
-
-Pull Requests with too many changed paths will not be restyled. The limit is
-controlled by the `maximum` key and `outcome` can either be `error` or `skip`.
-
 ### Remote files
 
 ```yaml
@@ -102,14 +91,6 @@ If omitted, `path` is the basename of `url`.
 
 ## Restyling Outcomes
 
-### Auto
-
-```yaml
-auto: false
-```
-
-Push the restyled commits directly to the original PR.
-
 ### Commit Template
 
 ```yaml
@@ -119,97 +100,6 @@ commit_template: |
 
 Control the commit messages used when Restyler makes fixes. Supports limited
 interpolation, currently just `${restyler.name}`.
-
-### Pull Requests
-
-```yaml
-pull_requests: true
-```
-
-Open Restyle PRs?
-
-### Comments
-
-```yaml
-comments: false
-```
-
-🗑️ **This feature was removed and this option no longer has any
-effect**.
-
-### Pull Request Statuses
-
-```yaml
-statuses:
-  skipped: true # Green when skipped
-  differences: true # Red when style differences are found
-  no_differences: true # Green when no differences are found
-```
-
-A single value can be used to disable/enable all:
-
-```yaml
-statuses: false
-```
-
-Or separate values as shown in the defaults.
-
-Note that PR statuses are always sent on errors. This is because errors may
-occur (and are always handled) outside of the repository clone operation, so we
-are unable to use the in-repository configuration from this logic.
-
-### Review requests
-
-```yaml
-request_review: none
-```
-
-Possible values:
-
-- `author`: From the author of the original PR
-- `owner`: From the owner of the base repository
-- `none`: Don't
-- `{any text}`: From this GitHub user or team name
-
-One value will apply to both origin and forked PRs:
-
-```yaml
-request_review: author
-```
-
-Or you can specify separate values. If you specify only one, the other is
-defaulted as shown:
-
-```yaml
-request_review:
-  origin: author
-  forked: none
-```
-
-Therefore,
-
-```yaml
-request_review: {}
-```
-
-Is a method to opt into review-requests but with default choices about from who.
-
-### Labels
-
-```yaml
-labels: []
-```
-
-Labels to add to any created Restyle PRs.
-
-These can be used to tell other automation to avoid our PRs.
-
-Example:
-
-```yaml
-labels:
-  - pullassigner-ignore
-```
 
 ### Ignore Authors
 
@@ -311,7 +201,7 @@ restylers:
 ```
 
 Omitted keys inherit defaults for the Restyler of that name, which can be seen
-in [Available Restylers](https://docs.restyled.io/available-restylers/).
+in [Available Restylers](/restyler/).
 
 Note that the `enabled` key is not inherited. Adding an item to this list,
 without specifying `enabled: false`, automatically enables that Restyler.

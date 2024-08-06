@@ -2,6 +2,7 @@ code {
   background-color: white;
   color: #444;
   padding: 0;
+  padding-bottom: 2px;
 }
 
 pre code {

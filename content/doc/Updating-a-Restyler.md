@@ -4,11 +4,11 @@ title: "Updating a Restyler"
 
 ## How do I know what versions are current?
 
-See https://docs.restyled.io/available-restylers/.
+See [Available Restylers](/restyler).
 
 ## How do I know what versions are available?
 
-See https://hub.docker.com/r/restyled/restyler-{restyler}/tags.
+Go to `https://hub.docker.com/r/restyled/restyler-{restyler}/tags`.
 
 For example: https://hub.docker.com/r/restyled/restyler-scalafmt/tags.
 
