@@ -6,4 +6,8 @@ HUGO_VERSION = "0.131.0"
   to = "https://github.com/restyled-io/restylers/releases/download/:channel/restylers.yaml"
   status = 200
   force = true
-  headers = {Access-Control-Allow-Origin = "*"}
+
+[[headers]]
+  for = "/data-files/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
