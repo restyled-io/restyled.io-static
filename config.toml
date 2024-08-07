@@ -7,3 +7,8 @@ unsafe = true
 
 [markup.highlight]
 noClasses = false
+
+[build]
+  [build.resources]
+    [build.resources.match]
+      "assets/js/*.ts" = ["typescript"]

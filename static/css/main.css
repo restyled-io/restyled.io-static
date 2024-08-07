@@ -5,8 +5,8 @@ code {
   padding-bottom: 2px;
 }
 
-pre code {
-  background-color: #eff1f5;
+pre {
+  background-color: #f3f3f3;
 }
 
 img {
@@ -52,7 +52,7 @@ footer {
 .red { color: #cc9393; }
 
 /*
- * For available-restylers
+ * For /restylers
  *
  */
 pre code.hljs {
@@ -95,10 +95,6 @@ aside#table-of-contents {
 #table-of-contents a {
   text-decoration: none;
   text-transform: uppercase;
-}
-
-#main {
-  margin: 0 auto 0 240px;
 }
 
 .test {
