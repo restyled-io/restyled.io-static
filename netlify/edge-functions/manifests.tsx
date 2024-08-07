@@ -1,3 +1,11 @@
+/* Redirects /data-files/restylers/manifests/:channel/restylers.yaml to
+ * https://github.com/.../releases/download/:channel/restylers.yaml.
+ *
+ * This keeps all our docs.restyled.io links to manifests working even when we
+ * move storage entirely to GitHub releases.
+ *
+ * This could be a simple redirect, but alas, CORS.
+ */
 declare var URL: any;
 
 import type { Context } from "@netlify/edge-functions";
