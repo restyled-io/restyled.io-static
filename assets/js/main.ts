@@ -27,9 +27,9 @@ type Test = {
 };
 
 function appendRestyler(restyler: Restyler) {
-  const section = document.createElement("section");
-  section.innerHTML = restylerTemplate(restyler);
-  section.querySelectorAll("pre code").forEach((block) => {
+  const div = document.createElement("div");
+  div.innerHTML = restylerTemplate(restyler);
+  div.querySelectorAll("pre code").forEach((block) => {
     hljs.highlightElement(block);
   });
 
@@ -46,7 +46,7 @@ function appendRestyler(restyler: Restyler) {
   const restylers = document.getElementById("restylers");
   const toc = document.querySelector("#table-of-contents > ul");
 
-  restylers?.appendChild(section);
+  restylers?.appendChild(div);
   toc?.appendChild(li);
 }
 
@@ -57,9 +57,9 @@ function restylerTemplate(restyler: Restyler): string {
   });
 
   return `
-    <h3 id="${restyler.name}-restyler" class="uncenter">
+    <h2 id="${restyler.name}-restyler">
       ${restyler.name}
-    </h3>
+    </h2>
 
     <table>
       <tbody>
@@ -97,6 +97,8 @@ function restylerTemplate(restyler: Restyler): string {
     <summary>Examples</summary>
     ${restyler.metadata.tests.map((t) => testTemplate(language, t)).join("\n")}
     </details>
+
+    <hr>
   `;
 }
 

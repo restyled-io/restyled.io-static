@@ -1516,7 +1516,7 @@ mark,
 hr {
   background: #9f9f9f;
   border-color: transparent;
-  height: 6px;
+  /* height: 6px; */
   margin-bottom: 1em;
   max-width: 55ch;
 }

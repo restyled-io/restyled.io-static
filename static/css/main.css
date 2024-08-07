@@ -97,6 +97,11 @@ aside#table-of-contents {
   text-transform: uppercase;
 }
 
+section#restylers {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .test {
   border-radius: 5px;
   border: 1px solid #909090;
