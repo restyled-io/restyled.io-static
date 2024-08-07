@@ -1,7 +1,7 @@
 declare var hljs: any;
 declare var jsyaml: any;
 
-const docs = "https://docs.restyled.io";
+const docs = "https://restyledio.netlify.app";
 const navBarHeight = 46;
 
 type Restyler = {
