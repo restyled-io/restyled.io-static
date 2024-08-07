@@ -1,2 +1,16 @@
 [build.environment]
 HUGO_VERSION = "0.131.0"
+
+[[redirects]]
+  from = "/data-files/restylers/manifests/dev/restylers.yaml"
+  to = "https://github.com/restyled-io/restylers/releases/download/dev/restylers.yaml
+  status = 200
+  force = true
+  headers = {X-From = "Netlify", Access-Control-Allow-Origin = "*"}
+
+[[redirects]]
+  from = "/data-files/restylers/manifests/stable/restylers.yaml"
+  to = "https://github.com/restyled-io/restylers/releases/download/stable/restylers.yaml
+  status = 200
+  force = true
+  headers = {X-From = "Netlify", Access-Control-Allow-Origin = "*"}
