@@ -1,8 +1,2 @@
 [build.environment]
 HUGO_VERSION = "0.131.0"
-
-[[redirects]]
-  from = "/data-files/restylers/manifests/:channel/restylers.yaml"
-  to = "https://github.com/restyled-io/restylers/releases/download/:channel/restylers.yaml"
-  status = 200
-  force = true
