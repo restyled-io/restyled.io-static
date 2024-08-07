@@ -12,5 +12,5 @@ export default async (_req, _context) => {
 };
 
 export const config = {
-  path: "/data-files/restylers/manifests/*",
+  path: "/data-files/restylers/manifests/stable/restylers.yaml",
 };
