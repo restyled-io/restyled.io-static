@@ -45,7 +45,7 @@ features of their robust build system: scheduling, dispatch, reruns, redundant
 job cancellation, bigger runners, self-hosting, etc, etc.
 
 **Zero configuration, if you want**: Restyled will run [60 language-appropriate
-auto-formatters][restyers] based on which files have changed, without any
+auto-formatters][restylers] based on which files have changed, without any
 configuration from you. But if your project _does_ use an auto-formatter,
 configurations such as `.prettierc` will be respected when Restyled runs.
 
