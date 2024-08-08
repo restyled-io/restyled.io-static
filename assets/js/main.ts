@@ -46,6 +46,7 @@ function appendRestyler(restyler: Restyler) {
   const restylers = document.getElementById("restylers");
   const toc = document.querySelector("#table-of-contents > ul");
 
+  restylers?.classList.remove("loading");
   restylers?.appendChild(div);
   toc?.appendChild(li);
 }

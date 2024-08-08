@@ -102,6 +102,14 @@ section#restylers {
   padding-top: 0;
 }
 
+.spinner {
+  display: none;
+}
+
+.loading .spinner {
+  display: block;
+}
+
 .test {
   border-radius: 5px;
   border: 1px solid #909090;

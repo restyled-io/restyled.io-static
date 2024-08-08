@@ -6,4 +6,8 @@ title: restylers
   <ul></ul>
 </aside>
 
-<section id="restylers"></section>
+<section id="restylers" class="loading">
+  <div class="spinner">
+    <h2>Loading...<h2>
+  </div>
+</section>
