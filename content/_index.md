@@ -2,7 +2,7 @@
 
 Restyled makes it easy to maintain, or transition to, a consistent coding style
 across your entire organization by integrating existing auto-formatting tools
-directly into your existing Pull Request process as a GitHub Action:
+directly into your existing Pull Request process through GitHub Actions:
 
 ```yaml
 # .github/workflows/restyled.yml
@@ -56,7 +56,7 @@ of things other than that. And Restyled always prints a copy/paste-able `git am`
 command to [apply the style-fixing commits directly to a local
 checkout][apply-locally].
 
-**Extensible**: Restyled is a [collection of distinct and well-isolated
+**Open and extensible**: Restyled is a [collection of distinct and well-isolated
 open-source projects][org], each of which are easy to contribute to depending on
 what you would like to see happen.
 
