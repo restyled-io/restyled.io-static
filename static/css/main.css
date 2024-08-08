@@ -87,6 +87,12 @@ aside#table-of-contents {
   z-index: 1;
 }
 
+@media only screen and (max-width: 1080px) {
+  aside#table-of-contents {
+    display: none;
+  }
+}
+
 #table-of-contents ul {
   list-style-type: none;
   padding-top: 12px;
@@ -95,6 +101,11 @@ aside#table-of-contents {
 #table-of-contents a {
   text-decoration: none;
   text-transform: uppercase;
+}
+
+#table-of-contents .sub {
+  font-size: 95%;
+  padding-left: 1em;
 }
 
 section#restylers {
