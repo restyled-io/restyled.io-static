@@ -1,26 +1,12 @@
-**Style is important**. Any time there's more than one way to do something in
-code, inconsistencies will creep in. Besides measurably adding to the time it
-takes to read and comprehend code, inconsistent style across a code base can
-hide bugs, often [very][bumblebee] [bad][steam] [ones][apple].
-
-[bumblebee]: https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/issues/123
-[steam]: https://github.com/ValveSoftware/steam-for-linux/issues/3671
-[apple]: https://www.synopsys.com/blogs/software-security/understanding-apple-goto-fail-vulnerability-2.html
-
-Great tools exist for almost every language to automatically align code to a
-defined style. Through editor integrations or git pre-commit hooks, a single
-developer can give themselves a great work-flow for automatically dealing with
-style. Doing this across a team, on the other hand, can be challenging.
+# Restyled
 
 Restyled makes it easy to maintain, or transition to, a consistent coding style
-across your entire organization by integrating directly into your existing Pull
-Request process as a GitHub Action.
-
-## Getting Started
-
-Add the file `.github/workflows/restyled.yml` to your repository:
+across your entire organization by integrating existing auto-formatting tools
+directly into your existing Pull Request process as a GitHub Action:
 
 ```yaml
+# .github/workflows/restyled.yml
+
 name: Restyled
 
 on:
@@ -43,7 +29,7 @@ jobs:
           fail-on-differences: true
 
       # Maintain a sibling PR of the style fixes
-      - if: ${{ !cancelled() }}
+      - if: ${{ !cancelled() && steps.restyler.outputs.success == 'true' }}
         uses: peter-evans/create-pull-request@v6
         with:
           base: ${{ steps.restyler.outputs.restyled-base }}
