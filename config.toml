@@ -1,4 +1,4 @@
-baseURL = "https://restyledio.netlify.app/"
+baseURL = "https://docs.restyled.io/"
 title = "Restyled"
 theme = "restyled"
 
