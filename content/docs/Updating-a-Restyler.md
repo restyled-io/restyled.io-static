@@ -4,7 +4,7 @@ title: "Updating a Restyler"
 
 ## How do I know what versions are current?
 
-See [Available Restylers](/restyler).
+See [Available Restylers](/restylers).
 
 ## How do I know what versions are available?
 

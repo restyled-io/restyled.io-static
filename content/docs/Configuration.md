@@ -1,6 +1,28 @@
 ---
-title: "Configuring Restyled"
+title: "Configuration"
 ---
+
+<aside id="table-of-contents">
+  <ul>
+    <li><a href="#general-notes">General notes</a></li>
+    <li><a href="#core-configuration">Core Configuration</a></li>
+    <li class="sub"><a href="#enabled">Enabled</a></li>
+    <li class="sub"><a href="#exclude">Exclude</a></li>
+    <li class="sub"><a href="#also-exclude">Also Exclude</a></li>
+    <li class="sub"><a href="#remote-files">Remote Files</a></li>
+    <li><a href="#restyling-outcomes">Restyling Outcomes</a></li>
+    <li class="sub"><a href="#commit-template">Commit Template</a></li>
+    <li class="sub"><a href="#ignore-authors">Ignore Authors</a></li>
+    <li class="sub"><a href="#ignore-branches">Ignore Branches</a></li>
+    <li class="sub"><a href="#ignore-labels">Ignore Labels</a></li>
+    <li><a href="#restylers">Restylers</a></li>
+    <li class="sub"><a href="#restylers-version">Restylers Version</a></li>
+    <li class="sub"><a href="#restylers">Restylers</a></li>
+    <li class="sub"><a href="#wildcard">Wildcard</a></li>
+    <li class="sub"><a href="#restyler-override">Restyler Override</a></li>
+  </ul>
+</aside>
+
 
 The restyling process can be configured through a YAML file committed in your
 repository. Restyled will use the first file found at any of the following
