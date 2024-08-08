@@ -44,5 +44,5 @@ Bonus points if you warn us about any major or breaking changes.
 
 This is one of the easiest ways to contribute. Versions are usually specified in
 an obvious way within the `./{restyler}` sub-directory; a find-and-replace is
-typically all that's needed. [Adding a Restyler](/doc/adding-a-restyler) can
+typically all that's needed. [Adding a Restyler](/docs/adding-a-restyler) can
 provide some general context.

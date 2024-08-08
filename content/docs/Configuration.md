@@ -369,7 +369,7 @@ Valid keys in the _override object_ are:
           tag: v16
   ```
 
-  See [Restyler Versions](/doc/restyler-versions#series-images) for more details
+  See [Restyler Versions](/docs/restyler-versions#series-images) for more details
   about so-called "series images", such as the `v16` tag shown above.
 
 - `command`: string or array of string

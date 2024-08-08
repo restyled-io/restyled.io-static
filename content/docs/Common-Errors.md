@@ -66,7 +66,7 @@ This is because the module contains
 which `apply-refact` can't handle.
 
 Unfortunately, the only workaround is to [exclude the file from
-Restyler](/doc/configuration-reference#pattern).
+Restyler](/docs/configuration-reference#pattern).
 
 ## Cannot find module '@...'
 
@@ -86,7 +86,7 @@ Restyler image. If you are attempting to use such a package, please open a PR on
 [restyled.io/restylers](https://github.com/restyled-io/restylers).
 
 Restyled also supports [custom Restyler
-images](/doc/using-a-custom-restyler-image), in which you can install whatever
+images](/docs/using-a-custom-restyler-image), in which you can install whatever
 software you like.
 
 ## "prettier-with-tailwindcss": executable file not found in $PATH
@@ -204,7 +204,7 @@ examples, that can help spot such problems.
 
 ---
 
-For more details see the [Configuration Reference](/doc/configuring-restyled).
+For more details see the [Configuration Reference](/docs/configuration).
 
 ## Restyle Error 128
 
@@ -314,7 +314,7 @@ so that attempt fails with the above error.
 
 You can either change your `version` configuration to match our image, or use a
 different image that is the correct version through a [Restyler
-Override](/doc/configuring-restyled#restyler-override). You can see what images
+Override](/docs/configuration#restyler-override). You can see what images
 are available on on [Docker
 Hub](https://hub.docker.com/r/restyled/restyler-scalafmt/tags?page=1&name=v).
 
