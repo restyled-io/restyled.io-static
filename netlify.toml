@@ -4,3 +4,9 @@ HUGO_VERSION = "0.131.0"
 [[edge_functions]]
   path = "/data-files/restylers/manifests/*"
   function = "manifests"
+
+[[redirects]]
+  from = "/available-restylers"
+  to = "/restylers"
+  status = 301
+  force = false
