@@ -26,7 +26,7 @@ type Test = {
   restyled: string;
 };
 
-function appendRestyler(restyler: Restyler) {
+function appendRestyler($section: HTMLElement, restyler: Restyler) {
   const div = document.createElement("div");
   div.innerHTML = restylerTemplate(restyler);
   div.querySelectorAll("pre code").forEach((block) => {
@@ -43,11 +43,10 @@ function appendRestyler(restyler: Restyler) {
     e.preventDefault();
   };
 
-  const restylers = document.getElementById("restylers");
   const toc = document.querySelector("#table-of-contents > ul");
 
-  restylers?.classList.remove("loading");
-  restylers?.appendChild(div);
+  $section.classList.remove("loading");
+  $section.appendChild(div);
   toc?.appendChild(li);
 }
 
@@ -156,7 +155,7 @@ function languageClass(language: string | null): string {
   }
 }
 
-function loadManifest(channel: string) {
+function loadManifest($section: HTMLElement, channel: string) {
   const manifest = `${docs}/data-files/restylers/manifests/${channel}/restylers.yaml`;
 
   $.ajax(manifest, {
@@ -167,7 +166,7 @@ function loadManifest(channel: string) {
       const restylers: Restyler[] = jsyaml.load(data);
 
       for (let restyler of restylers) {
-        appendRestyler(restyler);
+        appendRestyler($section, restyler);
       }
 
       const hash = window.location.hash.replace(/^#/, "");
@@ -227,11 +226,16 @@ function escapeHTML(str: string): string {
 }
 
 $(function () {
-  const query = window.location.search;
-  const params = new URLSearchParams(query);
-  const channel = params.has("channel")
-    ? (params.get("channel") as string)
-    : "stable";
+  const $section = document.getElementById("restylers");
 
-  loadManifest(channel);
+  // Avoid accidentally dumping into a "Restylers" header
+  if ($section && $section.tagName === "SECTION") {
+    const query = window.location.search;
+    const params = new URLSearchParams(query);
+    const channel = params.has("channel")
+      ? (params.get("channel") as string)
+      : "stable";
+
+    loadManifest($section, channel);
+  }
 });
