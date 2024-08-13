@@ -57,3 +57,51 @@ jobs:
 ```
 
 For more details, see [here](https://github.com/restyled-io/actions#readme).
+
+## Differences
+
+Assuming you use the example workflow above, in an attempt to keep behavior as
+close to the original Restyled jobs as possible, you will find the following
+differences:
+
+### Status
+
+Users used to see a `restyled` PR status, with our Avatar. The _details_ link
+would go to the Restyled Pull Request (or the Job if there is none):
+
+![Restyled App status](/img/hosted-restyled-status.png)
+
+Now, the status will be the same as any other Workflow, with the _details_ link
+taking you to that workflow.
+
+![Restyled workflow status](/img/workflow-restyled-status.png)
+
+**NOTE**: opening the Restyled PR did, and will still, put an event into the
+stream of your original PR, which is the easiest way to navigate to it:
+
+![Restyled PR mention in original PR events](/img/restyled-pr-mention.png)
+
+### Author
+
+Restyled PRs used to be opened by the `restyled-io` app user:
+
+![PR header as created by restyled-io](/img/hosted-author.png)
+
+They're now opened by the `github-actions` bot:
+
+![PR header as created by github-actions](/img/workflow-author.png)
+
+**NOTE**: The author of the PR can be changed by using a different
+`GITHUB_TOKEN` in the `create-pull-request` step.
+
+### Patch Command
+
+Users used to see a `curl <url> | git am` command in the Job log, and they could
+follow that URL to see the full patch as its own web page:
+
+![Restyled App curl-git-am](/img/hosted-curl-git-am.png)
+
+Now, they will see a `base64 | git am << <heredoc>` command and can optionally
+expand the full patch directly in logs:
+
+![Restyled workflow base64-git-am](/img/workflow-base64-git-am.png)
