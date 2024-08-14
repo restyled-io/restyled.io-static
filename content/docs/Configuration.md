@@ -330,6 +330,7 @@ Valid keys in the _override object_ are:
 
   Pattern(s) to match files that should be Restyled.
 
+  {{< note >}}
   **NOTE**: these are processed in order, so be careful you don't accidentally
   do something like:
 
@@ -340,6 +341,7 @@ Valid keys in the _override object_ are:
 
   which says to exclude `bad-file.hs`, then immediately re-includes it via the
   wildcard.
+  {{< /note >}}
 
 - `interpreters`: interpreter or array of interpreters
 

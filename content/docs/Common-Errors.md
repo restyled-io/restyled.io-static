@@ -294,11 +294,11 @@ Or by creating a `rustfmt.toml` for the project:
 edition = "2018"
 ```
 
+{{< note >}}
 **NOTE**: Unfortunately, specifying edition in `Cargo.toml` only effects
 invocations of `cargo fmt`, and not direct invocations of `rustfmt` (as the
 Restyler must do in order to only restyle changed files).
-
-\*PRs welcome :)
+{{< /note >}}
 
 ## `FailedToFormat` "failed to download"
 

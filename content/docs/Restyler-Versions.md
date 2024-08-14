@@ -127,7 +127,9 @@ As long as the image is publicly available (and functions properly as a
 Restyler), this will work. This is a great way to test fixes yourself before
 submitting PRs.
 
+{{< note >}}
 **NOTE**: Restylers have direct access to the source code they're restyling.
 While they are run in an isolated working directory and with `--net=none` as
 safe guards (among other things), you should still fully trust the image you are
 specifying here.
+{{< /note >}}

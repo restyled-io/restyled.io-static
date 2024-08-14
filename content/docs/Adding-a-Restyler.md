@@ -94,8 +94,10 @@ Build (and lint) the Docker image and run the tests:
 just test bananas
 ```
 
+{{< note >}}
 **NOTE**: if this doesn't work, and you can't make it work, please still submit
 the PR and we'll help you out through its review.
+{{< /note >}}
 
 That's it! Open a Pull Request and we'll go from there.
 

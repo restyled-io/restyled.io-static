@@ -26,10 +26,11 @@ footer {
 }
 
 .note {
-  color: #4c4f69;
   background-color: #eff1f5;
   border-radius: 3px;
   border: solid 1px;
+  color: #4c4f69;
+  margin-bottom: 1em;
   padding: 1em;
 }
 
@@ -68,7 +69,6 @@ pre code.hljs {
 }
 
 table, .highlight {
-  width: 55ch;
   margin: 0 auto 1em auto;
 }
 
