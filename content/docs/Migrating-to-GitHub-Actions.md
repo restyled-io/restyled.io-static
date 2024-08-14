@@ -66,7 +66,7 @@ differences:
 
 ### Status
 
-Users used to see a `restyled` PR status, with our Avatar. The _details_ link
+Users used to see a `restyled` PR status, with our avatar. The _details_ link
 would go to the Restyled Pull Request (or the Job if there is none):
 
 ![Restyled App status](/img/hosted-restyled-status.png)
@@ -76,8 +76,12 @@ taking you to that workflow.
 
 ![Restyled workflow status](/img/workflow-restyled-status.png)
 
-**NOTE**: opening the Restyled PR did, and will still, put an event into the
-stream of your original PR, which is the easiest way to navigate to it:
+![Restyled workflow job](/img/restyled-job.png)
+
+{{< note >}}
+**NOTE**: opening the Restyled PR still puts an event into the stream of your
+original PR, which is the easiest way to navigate to it:
+{{< /note >}}
 
 ![Restyled PR mention in original PR events](/img/restyled-pr-mention.png)
 
@@ -91,8 +95,10 @@ They're now opened by the `github-actions` bot:
 
 ![PR header as created by github-actions](/img/workflow-author.png)
 
-**NOTE**: The author of the PR can be changed by using a different
-`GITHUB_TOKEN` in the `create-pull-request` step.
+{{< note >}}
+**NOTE**: The author of the PR is determined by the `GITHUB_TOKEN` in the
+`create-pull-request` step.
+{{< /note >}}
 
 ### Patch Command
 

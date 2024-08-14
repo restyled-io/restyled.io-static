@@ -25,6 +25,14 @@ footer {
   text-align: center;
 }
 
+.note {
+  color: #4c4f69;
+  background-color: #eff1f5;
+  border-radius: 3px;
+  border: solid 1px;
+  padding: 1em;
+}
+
 .anchor {
   font-size: 75%
 }
