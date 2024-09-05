@@ -2,7 +2,9 @@
 <section>
   {{ range .Pages }}
     <div class="title">
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <a href="{{ .Permalink }}">
+        {{ if not .Date.IsZero }}{{ .Date.Format "2006-01-02" }} - {{ end }}{{ .Title }}
+      </a>
     </div>
   {{ end }}
 </section>
