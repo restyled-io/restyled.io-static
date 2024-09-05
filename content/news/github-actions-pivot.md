@@ -30,8 +30,8 @@ All the while, I (with [some
 help](https://github.com/restyled-io/restylers/graphs/contributors)) maintained
 about [60 individual Restylers](https://docs.restyled.io/available-restylers/)
 through a robust CI/CD process. Paid Restyled usage fluctuated around $30-60 a
-month, so I was happy to pay difference for this "hobby" that also provided a
-service to that many users.
+month, so I was happy to pay the difference for this "hobby" that also provided
+a service to that many users.
 
 During that time, GitHub Actions was created and grew massively. It's clear that
 if I were to do it over, that's what I would've done. For users, implementing
