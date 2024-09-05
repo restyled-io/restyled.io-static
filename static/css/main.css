@@ -81,8 +81,9 @@ pre code.hljs {
   padding: 0 !important;
 }
 
-table, .highlight {
-  margin: 0 auto 1em auto;
+table {
+  margin: 1em 0;
+  width: 100%;
 }
 
 table tr:first-child > th:first-child {
