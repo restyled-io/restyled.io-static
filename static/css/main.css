@@ -26,7 +26,7 @@ footer {
 }
 
 .note {
-  background-color: #eff1f5;
+  background-color: #ddeefa;
   border-radius: 3px;
   border: solid 1px;
   color: #4c4f69;
@@ -34,8 +34,21 @@ footer {
   padding: 1em;
 }
 
+.note code {
+  background-color: #ddeefa;
+}
+
 .anchor {
+  display: none;
   font-size: 75%
+}
+
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+  display: inline-block;
 }
 
 .large {

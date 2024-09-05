@@ -51,8 +51,8 @@ metadata:
 | ----------------------------------- | --------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `enabled`                           | `bool`          | `false`       | Run in the default configuration?                                                                                                                                |
 | `name`                              | `string`        | **required**  | Unique name for this Restyler                                                                                                                                    |
-| `version_cmd`\*                     | `string`        |               | A command to run to get the Restyler's version                                                                                                                   |
-| `version`\*                         | `string`        |               | An explicit version to use (overrides `version_cmd`)                                                                                                             |
+| `version_cmd`[^1]                   | `string`        |               | A command to run to get the Restyler's version                                                                                                                   |
+| `version`                           | `string`        |               | An explicit version to use (overrides `version_cmd`)                                                                                                             |
 | `command`                           | `[string]`      | `[$name]`     | Auto-formatting command, and any "all the time" argument (e.g. `--inplace`)                                                                                      |
 | `arguments`                         | `[string]`      | `[]`          | Additional arguments to include by default, but not required to function                                                                                         |
 | `include`                           | `[pattern]`     | `[]`          | [Include Patterns](http://docs.restyled.io/restyler/restyler-0.2.0.0/Restyler-Config-Include.html) to match files this Restyler should operate on                |
@@ -65,22 +65,12 @@ metadata:
 | `metadata.languages`                | `[string]`      | `[]`          | Free-form names of languages this Restyler supports                                                                                                              |
 | `metadata.tests`                    | `[Test]`        | `[]`          |                                                                                                                                                                  |
 | `metadata.tests[].name`             | `string`        | `Test #{n}`   | Descriptive name for the test                                                                                                                                    |
-| `metadata.tests[].support`\*\*      | `Support`       | none          | Support file (e.g. `.rubocop.yaml`) needed for the test                                                                                                          |
+| `metadata.tests[].support`[^2]      | `Support`       | none          | Support file (e.g. `.rubocop.yaml`) needed for the test                                                                                                          |
 | `metadata.tests[].support.path`     | `string`        | **required**  | Name of the file                                                                                                                                                 |
 | `metadata.tests[].support.contents` | `string`        | **required**  | Contents of the file                                                                                                                                             |
 | `metadata.tests[].extension`        | `string`        | `.temp`       | Extension to use for restyled file                                                                                                                               |
 | `metadata.tests[].contents`         | `string`        | **required**  | Content to be restyled as the test                                                                                                                               |
 | `metadata.tests[].restyled`         | `string`        | **required**  | Expected content after restyling                                                                                                                                 |
 
-\* One of `version_cmd`, `version` is required. If possible, using `version_cmd`
-is better because it means all you have to do is update the actual `Dockerfile`
-and not manually keep `version` in sync. The resulting Docker image we use will
-be named:
-
-```console
-[{registry}/]restyled/restyler-${name}:${version-or-output-of-version_cmd}
-```
-
-\**: A `tests[].support` file will be present for *all* test cases if *any\*
-test case defines it. This is just a historical accident that we've yet to
-correct.
+[^1]: One of `version_cmd` (preferred) or `version` is required
+[^2]: A `tests[].support` file will be present for all test cases if any test case defines it

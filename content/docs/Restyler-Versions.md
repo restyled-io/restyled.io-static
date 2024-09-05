@@ -59,14 +59,15 @@ restylers:
 From then on, regardless of how the default Restylers set changes, this Restyler
 will always run this image, until you change it.
 
-> **Note**: the above changes only the `tag` field of the image and is
-> equivalent to
->
-> ```yaml
-> image: restyled/restyler-brittany:v0.11.0.0
-> ```
->
-> Other available fields are `registry` and `name`.
+{{< note >}}
+The above changes only the `tag` field of the image and is equivalent to:
+
+```yaml
+image: restyled/restyler-brittany:v0.11.0.0
+```
+
+Other available fields are `registry` and `name`.
+{{< /note >}}
 
 ### Opt in to newer, earlier
 
