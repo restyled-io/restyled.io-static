@@ -1,4 +1,4 @@
-import handler from "./restyler-tags.js";
+import handler from "./../edge-functions/restyler-tags.js";
 
 describe("restyler-tags", () => {
   it(
