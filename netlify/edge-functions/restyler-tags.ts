@@ -56,10 +56,15 @@ async function fetchTags(
 
   let results: Tag[] = [];
 
-  while (page.next !== null && page.next !== undefined) {
+  while (true) {
     results = results.concat(
       page.results.filter((tag) => !isCommitSha(tag.name))
     );
+
+    if (!page.next) {
+      break;
+    }
+
     page = await fetchPage(page.next);
   }
 

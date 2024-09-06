@@ -14,12 +14,28 @@ describe("restyler-tags", () => {
       // Assert on oldest 5 so, as we ship new tags, this test still passes
       const json = await response.json();
       expect(json.slice(-5)).toEqual([
-        "v0.14.1.0",
         "v0.13.0.0",
         "v0.12.0.0",
         "v0.10.1.0",
         "v0.4.0.0",
+        "v0.3.0.0",
       ]);
+    },
+    60 * 1000
+  );
+
+  it(
+    "Works for cabal-fmt",
+    async () => {
+      const request = new Request(
+        "https://example.com/restyler-tags?name=cabal-fmt"
+      );
+
+      const response = await handler(request, {});
+      expect(response.ok).toBe(true);
+
+      const json = await response.json();
+      expect(json.slice(-3)).toEqual(["v0.1", "v0", "v0.1.6"]);
     },
     60 * 1000
   );
