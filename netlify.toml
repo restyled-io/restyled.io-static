@@ -5,6 +5,10 @@ HUGO_VERSION = "0.131.0"
   path = "/data-files/restylers/manifests/*"
   function = "manifests"
 
+[[edge_functions]]
+  path = "/restyler-tags"
+  function = "restyler-tags"
+
 [[redirects]]
   from = "/available-restylers"
   to = "/restylers"
