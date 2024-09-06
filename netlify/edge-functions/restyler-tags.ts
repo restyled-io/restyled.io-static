@@ -72,7 +72,7 @@ async function fetchTags(
 }
 
 function isCommitSha(name: string): boolean {
-  return name.match(/^[a-f0-9]{40}$/) !== null;
+  return name.match(/^[a-f0-9]+$/) !== null;
 }
 
 export default async (request: Request, _context: Context) => {

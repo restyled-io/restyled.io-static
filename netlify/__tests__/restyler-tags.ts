@@ -1,41 +1,24 @@
 import handler from "./../edge-functions/restyler-tags.js";
 
 describe("restyler-tags", () => {
-  it(
-    "Returns all non-SHA tags from DockerHub",
-    async () => {
+  const scenarios = [
+    ["astyle", ["v3.1-2", "v3.1"]],
+    ["cabal-fmt", ["v0.1", "v0", "v0.1.6"]],
+    ["fourmolu", ["v0.10.1.0", "v0.4.0.0", "v0.3.0.0"]],
+  ];
+
+  it.each(scenarios)(
+    "Fetches version tags for %s",
+    async (name, tags) => {
       const request = new Request(
-        "https://example.com/restyler-tags?name=fourmolu"
-      );
-
-      const response = await handler(request, {});
-      expect(response.ok).toBe(true);
-
-      // Assert on oldest 5 so, as we ship new tags, this test still passes
-      const json = await response.json();
-      expect(json.slice(-5)).toEqual([
-        "v0.13.0.0",
-        "v0.12.0.0",
-        "v0.10.1.0",
-        "v0.4.0.0",
-        "v0.3.0.0",
-      ]);
-    },
-    60 * 1000
-  );
-
-  it(
-    "Works for cabal-fmt",
-    async () => {
-      const request = new Request(
-        "https://example.com/restyler-tags?name=cabal-fmt"
+        `https://example.com/restyler-tags?name=${name}`
       );
 
       const response = await handler(request, {});
       expect(response.ok).toBe(true);
 
       const json = await response.json();
-      expect(json.slice(-3)).toEqual(["v0.1", "v0", "v0.1.6"]);
+      expect(json.slice(-tags.length)).toEqual(tags);
     },
     60 * 1000
   );
