@@ -26,6 +26,7 @@ class ResponseError extends Error {
     return new Response(this.statusText, {
       status: this.status,
       headers: {
+        "access-control-allow-origin": "*",
         "content-type": "application/json",
       },
     });
@@ -84,6 +85,7 @@ export default async (request: Request, _context: Context) => {
 
     return new Response(body, {
       headers: {
+        "access-control-allow-origin": "*",
         "content-type": "application/json",
       },
     });
