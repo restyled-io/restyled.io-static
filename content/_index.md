@@ -11,6 +11,11 @@ name: Restyled
 
 on:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - closed
+      - synchronize
 
 jobs:
   restyled:
