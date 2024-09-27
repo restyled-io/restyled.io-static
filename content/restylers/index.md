@@ -1,7 +1,3 @@
----
-title: restylers
----
-
 <aside id="table-of-contents">
   <ul></ul>
 </aside>

@@ -1404,7 +1404,7 @@ blockquote {
   padding-left: 1em;
   margin-bottom: 1em;
   border-left: 5px solid #f0ebee;
-  max-width: 55ch;
+  /* max-width: 55ch; */
 }
 blockquote:nth-of-type(even) {
   text-align: right;
@@ -1439,7 +1439,7 @@ footer {
 }
 @media screen and (min-width: 480px) {
   .main {
-    max-width: 55ch;
+    max-width: 980px;
   }
   /* p, */
   /* form, */
@@ -1518,7 +1518,7 @@ hr {
   border-color: transparent;
   /* height: 6px; */
   margin-bottom: 1em;
-  max-width: 55ch;
+  /* max-width: 55ch; */
 }
 section > hr,
 body > hr {

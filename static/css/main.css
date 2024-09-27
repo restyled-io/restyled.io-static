@@ -135,6 +135,13 @@ section#restylers {
   padding-top: 0;
 }
 
+@media screen and (min-width: 1080px) {
+  section#restylers {
+    width: calc(980px - 240px);
+    margin-left: 240px;
+  }
+}
+
 .spinner {
   display: none;
 }
