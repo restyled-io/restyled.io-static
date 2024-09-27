@@ -4,8 +4,8 @@ title: Migrating to GitHub Actions
 
 ## Uninstall the GitHub App
 
-1. Navigate to _Settings > Applications > Installed GitHub Apps_ (for a user) or
-   _Settings > GitHub Apps > Installed GitHub Apps_ (for an organization)
+1. **For users**, navigate to _Settings > Applications > Installed GitHub Apps_
+1. **For orgs**, navigate to _Settings > GitHub Apps > Installed GitHub Apps_
 1. Click _Configure_ on the `Restyled.io` App
 1. Click _Uninstall_
 
@@ -60,9 +60,9 @@ For more details, see [here](https://github.com/restyled-io/actions#readme).
 
 ## Differences
 
-Assuming you use the example workflow above, in an attempt to keep behavior as
-close to the original Restyled jobs as possible, you will find the following
-differences:
+The above example workflow attempts to keep behavior as close to the original
+Restyled jobs as possible. However, certain parts of the experience will change,
+hopefully in unimportant ways.
 
 ### Status
 
@@ -111,3 +111,13 @@ Now, they will see a `base64 | git am << <heredoc>` command and can optionally
 expand the full patch directly in logs:
 
 ![Restyled workflow base64-git-am](/img/workflow-base64-git-am.png)
+
+### Cleaning up Abandoned Restyles
+
+Before, if you closed the original PR without addressing style, the Restyle PR
+was automatically closed. With the workflow above that no longer happens. There
+are ways to re-implement this feature, but with caveats. See the
+[here][readme-cleanup] and [here][cleanup-issue] for more details.
+
+[readme-cleanup]: https://github.com/restyled-io/actions?tab=readme-ov-file#cleaning-up-closed-prs
+[cleanup-issue]: https://github.com/restyled-io/actions/issues/39
