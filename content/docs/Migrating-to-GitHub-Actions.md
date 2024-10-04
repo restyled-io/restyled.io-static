@@ -115,9 +115,7 @@ expand the full patch directly in logs:
 ### Cleaning up Abandoned Restyles
 
 Before, if you closed the original PR without addressing style, the Restyle PR
-was automatically closed. With the workflow above that no longer happens. There
-are ways to re-implement this feature, but with caveats. See the
-[here][readme-cleanup] and [here][cleanup-issue] for more details.
+was automatically closed. The workflow above does not handle that, but it [can
+be extended to do so][readme-cleanup] if desired.
 
 [readme-cleanup]: https://github.com/restyled-io/actions?tab=readme-ov-file#cleaning-up-closed-prs
-[cleanup-issue]: https://github.com/restyled-io/actions/issues/39
