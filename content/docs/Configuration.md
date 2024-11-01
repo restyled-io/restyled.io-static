@@ -49,8 +49,6 @@ see it there.
 ## General notes
 
 - All keys are optional and default values begin each section below
-- All list values can also be given a single value, to indicate a single-element
-  list.
 
 ## Core Configuration
 
@@ -322,11 +320,11 @@ Valid keys in the _override object_ are:
   are considered not enabled, however this key is an explicit way to disable a
   Restyler without removing it from the list (e.g. temporarily).
 
-- `arguments`: string or array of string
+- `arguments`: array of string
 
   Any additional argument(s) to pass to the restyling command.
 
-- `include`: pattern or array of pattern
+- `include`: array of pattern
 
   Pattern(s) to match files that should be Restyled.
 
@@ -343,7 +341,7 @@ Valid keys in the _override object_ are:
   wildcard.
   {{< /note >}}
 
-- `interpreters`: interpreter or array of interpreters
+- `interpreters`: array of interpreters
 
   Extension-less files will be Restyled if they match interpreter(s) given here.
   Valid values are `sh`, `bash`, `python`, and `ruby`.
@@ -374,6 +372,6 @@ Valid keys in the _override object_ are:
   See [Restyler Versions](/docs/restyler-versions#series-images) for more details
   about so-called "series images", such as the `v16` tag shown above.
 
-- `command`: string or array of string
+- `command`: array of string
 
   The command (and any required argument(s)) to perform the Restyling.
