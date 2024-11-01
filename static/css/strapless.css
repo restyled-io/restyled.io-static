@@ -1506,7 +1506,7 @@ code {
 }
 pre {
   margin-bottom: 1em;
-  max-width: 78ch;
+  /* max-width: 78ch; */
 }
 mark,
 ::selection {
