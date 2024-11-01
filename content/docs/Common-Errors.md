@@ -2,7 +2,7 @@
 title: "Common Errors"
 ---
 
-## Unknown syntactical constructs
+## Brittany: Unknown syntactical constructs
 
 ```console
 ERROR: encountered unknown syntactical constructs:
@@ -40,7 +40,7 @@ someOtherFunction =
 Note that `disable-next-binding` on works on top-level bindings. Attractive as
 it may be, you can't disable a specific binding within a `where` or `let`.
 
-## Restyled keeps removing shebangs
+## Brittany: Restyled keeps removing shebangs
 
 If you edit a
 ["Stack Script"](https://docs.haskellstack.org/en/stable/GUIDE/#script-interpreter),
@@ -51,7 +51,7 @@ This is an open issue: https://github.com/lspitzner/brittany/issues/192
 
 Unfortunately, you must exclude such files via `.restyled.yaml`.
 
-## parse error on input ...
+## HLint: parse error on input ...
 
 If the HLint restyler fails, and a message like the following is visible:
 
@@ -68,7 +68,7 @@ which `apply-refact` can't handle.
 Unfortunately, the only workaround is to [exclude the file from
 Restyler](/docs/configuration-reference#pattern).
 
-## Cannot find module '@...'
+## Prettier: Cannot find module '@...'
 
 This happens when you import a module from a 3rd party package that provides
 some plugin or shared rules or configuration. Such plugins are not installed in
@@ -89,7 +89,7 @@ Restyled also supports [custom Restyler
 images](/docs/using-a-custom-restyler-image), in which you can install whatever
 software you like.
 
-## "prettier-with-tailwindcss": executable file not found in $PATH
+## Prettier: "prettier-with-tailwindcss": executable file not found in $PATH
 
 We recently added a new executable to the `prettier` restyler to support
 tailwindcss users. This mean modifying the manifests such that that command is
@@ -120,7 +120,7 @@ restylers:
   - "*"
 ```
 
-## Did you intend to specify a full Restyler object...
+## Config: Did you intend to specify a full Restyler object...
 
 **TL;DR**: you may have incorrect indentation.
 
@@ -167,7 +167,7 @@ being an invalid key for a `Restyler` (it is), when the real problem is that
 The solution is to make sure your indentation is like _Exhibit A_, assuming
 that's what you meant.
 
-## Mapping values are not allowed in this context
+## Config: Mapping values are not allowed in this context
 
 This error basically means you've started to define an Object (key-values) in a
 place where that's not expected or allowed by the Yaml syntax. The most common
@@ -273,7 +273,7 @@ Once `rustfmt` has been fixed, Restyled can update. For now, unfortunately, you
 have to either edit the code in a way that doesn't cause this bug, or exclude it
 from Restyled via `.restyled.yaml`.
 
-## expected one of ..., or an operator, found keyword `move`
+## Rustfmt: expected one of ..., or an operator, found keyword `move`
 
 The `rustfmt` Restyler is built to run the 2015 "edition"\*, and constructions
 only available in the 2018 edition may cause such syntax errors.
@@ -300,7 +300,7 @@ invocations of `cargo fmt`, and not direct invocations of `rustfmt` (as the
 Restyler must do in order to only restyle changed files).
 {{< /note >}}
 
-## `FailedToFormat` "failed to download"
+## Scalafmt: `FailedToFormat` "failed to download"
 
 ```console
        org.scalafmt.cli.FailedToFormat: /code/.scalafmt.conf
@@ -318,7 +318,7 @@ Override](/docs/configuration#restyler-override). You can see what images
 are available on on [Docker
 Hub](https://hub.docker.com/r/restyled/restyler-scalafmt/tags?page=1&name=v).
 
-## Restyled keeps removing `ViewPatterns`
+## Stylish Haskell: Restyled keeps removing `ViewPatterns`
 
 See
 [jaspervdj/stylish-haskell#75](https://github.com/jaspervdj/stylish-haskell/issues/75)
