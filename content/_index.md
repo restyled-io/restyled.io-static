@@ -40,7 +40,7 @@ jobs:
 
 For more details and other examples, see [restyled-io/actions][actions].
 
-[actions]: https://github.com/restyled-io/actions.
+[actions]: https://github.com/restyled-io/actions
 
 ## Features
 
