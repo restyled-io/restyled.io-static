@@ -11,34 +11,74 @@ name: Restyled
 
 on:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - closed
+      - synchronize
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
+  # For non-forks, we will maintain a sibling PR
   restyled:
+    if: |
+      github.event.action != 'closed' &&
+      github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
-      # Checkout the PR's branch
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
-      # Install and run the Restyled CLI, failing on differences
-      - uses: restyled-io/actions/setup@v3
+      - uses: restyled-io/actions/setup@v4
       - id: restyler
-        uses: restyled-io/actions/run@v3
+        uses: restyled-io/actions/run@v4
         with:
           fail-on-differences: true
 
-      # Maintain a sibling PR of the style fixes
       - if: ${{ !cancelled() && steps.restyler.outputs.success == 'true' }}
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           base: ${{ steps.restyler.outputs.restyled-base }}
           branch: ${{ steps.restyler.outputs.restyled-head }}
           title: ${{ steps.restyler.outputs.restyled-title }}
           body: ${{ steps.restyler.outputs.restyled-body }}
+          labels: "restyled"
+          reviewers: ${{ github.event.pull_request.user.login }}
+          delete-branch: true
+
+  # For forks, we will only run (and print git-am instructions)
+  restyled-fork:
+    if: |
+      github.event.action != 'closed' &&
+      github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: restyled-io/actions/setup@v4
+      - uses: restyled-io/actions/run@v4
+        with:
+          fail-on-differences: true
+
+  # On closed events clean up any leftover Restyled PRs
+  restyled-cleanup:
+    if: ${{ github.event.action == 'closed' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: restyled-io/actions/setup@v4
+      - id: restyler
+        uses: restyled-io/actions/run@v4
+      - run: gh --repo "$REPO" pr close "$BRANCH" --delete-branch || true
+        env:
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ steps.restyler.outputs.restyled-head }}
+          GH_TOKEN: ${{ github.token }}
 ```
 
-For more details and other examples, see [restyled-io/actions][actions].
+For more details, see [restyled-io/actions][actions].
 
 [actions]: https://github.com/restyled-io/actions
 

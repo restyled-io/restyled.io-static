@@ -22,13 +22,22 @@ name: Restyled
 
 on:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - closed
+      - synchronize
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
+  # For non-forks, we will maintain a sibling PR
   restyled:
+    if: |
+      github.event.action != 'closed' &&
+      github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,11 +50,8 @@ jobs:
         with:
           fail-on-differences: true
 
-      - if: |
-          !cancelled() &&
-          steps.restyler.outputs.success == 'true' &&
-          github.event.pull_request.head.repo.full_name == github.repository
-        uses: peter-evans/create-pull-request@v6
+      - if: ${{ !cancelled() && steps.restyler.outputs.success == 'true' }}
+        uses: peter-evans/create-pull-request@v7
         with:
           base: ${{ steps.restyler.outputs.restyled-base }}
           branch: ${{ steps.restyler.outputs.restyled-head }}
@@ -54,6 +60,33 @@ jobs:
           labels: "restyled"
           reviewers: ${{ github.event.pull_request.user.login }}
           delete-branch: true
+
+  # For forks, we will only run (and print git-am instructions)
+  restyled-fork:
+    if: |
+      github.event.action != 'closed' &&
+      github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: restyled-io/actions/setup@v4
+      - uses: restyled-io/actions/run@v4
+        with:
+          fail-on-differences: true
+
+  # On closed events clean up any leftover Restyled PRs
+  restyled-cleanup:
+    if: ${{ github.event.action == 'closed' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: restyled-io/actions/setup@v4
+      - id: restyler
+        uses: restyled-io/actions/run@v4
+      - run: gh --repo "$REPO" pr close "$BRANCH" --delete-branch || true
+        env:
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ steps.restyler.outputs.restyled-head }}
+          GH_TOKEN: ${{ github.token }}
 ```
 
 For more details, see [here](https://github.com/restyled-io/actions#readme).
@@ -111,11 +144,3 @@ Now, they will see a `base64 | git am << <heredoc>` command and can optionally
 expand the full patch directly in logs:
 
 ![Restyled workflow base64-git-am](/img/workflow-base64-git-am.png)
-
-### Cleaning up Abandoned Restyles
-
-Before, if you closed the original PR without addressing style, the Restyle PR
-was automatically closed. The workflow above does not handle that, but it [can
-be extended to do so][readme-cleanup] if desired.
-
-[readme-cleanup]: https://github.com/restyled-io/actions?tab=readme-ov-file#cleaning-up-closed-prs
