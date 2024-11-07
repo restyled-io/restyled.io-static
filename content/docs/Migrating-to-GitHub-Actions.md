@@ -19,13 +19,12 @@ repositories where you want Restyled to run.
 [actions]: https://github.com/restyled-io/actions?tab=readme-ov-file#usage-examples
 
 The **Sibling PRs (forks and cleanup)** example is meant to mirror the original
-behavior of a hosted installation. If you use that example, you will experience
-the following differences:
+behavior of a hosted installation. If you use that example, you should
+experience only the following differences:
 
 | Behavior              | Before            | Now               |
 | ---                   | ---               | ---               |
 | PR Author             | restyled-io       | github-actions    |
 | Status avatar         | restyled-io       | github-actions    |
 | Status link (success) | Restyled PR       | Restyled Job      |
-| Status link           | Restyled Job      | Restyled Job      |
 | Manual patching       | `curl\|git am`    | `base64\|git am`  |
