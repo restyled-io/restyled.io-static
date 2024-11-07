@@ -13,7 +13,7 @@ For more details, see [here](https://docs.github.com/en/apps/using-github-apps/r
 
 ## Add a Restyled Workflow
 
-Commit one of our [examples][action] as `.github/workflows/restyled.yml` in the
+Commit one of our [examples][actions] as `.github/workflows/restyled.yml` in the
 repositories where you want Restyled to run.
 
 [actions]: https://github.com/restyled-io/actions?tab=readme-ov-file#usage-examples

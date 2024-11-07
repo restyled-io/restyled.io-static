@@ -4,7 +4,7 @@ Restyled makes it easy to maintain, or transition to, a consistent coding style
 across your entire organization by integrating existing auto-formatting tools
 directly into your Pull Request process as a GitHub Actions Workflow
 
-Restyled is...
+## Restyled is...
 
 **Familiar**: By running as a GitHub Actions workflow, we gain all aspects and
 features of their robust build system: scheduling, dispatch, reruns, redundant
