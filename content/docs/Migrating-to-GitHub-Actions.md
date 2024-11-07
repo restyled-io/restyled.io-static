@@ -18,44 +18,14 @@ repositories where you want Restyled to run.
 
 [actions]: https://github.com/restyled-io/actions?tab=readme-ov-file#usage-examples
 
-## Differences
+The **Sibling PRs (forks and cleanup)** example is meant to mirror the original
+behavior of a hosted installation. If you use that example, you will experience
+the following differences:
 
-The _Sibling PRs (forks and cleanup)_ example is the closed we have to the
-original behavior of a hosted installation. If you use that example, you will
-experience the following differences:
-
-### Status
-
-**Before**: a `restyled` PR status, with our avatar. The _details_ link would go
-to the Restyled Pull Request (or the Job if there is none):
-
-![Restyled App status](/img/hosted-restyled-status.png)
-
-**Now**: the status will be the same as any other Workflow, with the _details_
-link taking you to that workflow.
-
-![Restyled workflow status](/img/workflow-restyled-status.png)
-
-### Author
-
-**Before**: Restyled PRs were opened by `restyled-io[bot]`:
-
-![PR header as created by restyled-io](/img/hosted-author.png)
-
-**Now**: they're now opened by `github-actions[bot]`:
-
-![PR header as created by github-actions](/img/workflow-author.png)
-
-### Patch Command
-
-**Before**: users saw a `curl <url> | git am` command in the Job log, and they
-could follow that URL to see the full patch as its own web page:
-
-![Restyled App curl-git-am](/img/hosted-curl-git-am.png)
-
-**Now**: there is a `base64 | git am` command that can be copied and pasted, or
-the `patch` output can be used in additional steps, e.g. to upload it as an
-artifact to be downloaded and applied similarly to the original `curl|git`
-command.
-
-![Restyled workflow base64-git-am](/img/workflow-base64-git-am.png)
+| Behavior              | Before            | Now               |
+| ---                   | ---               | ---               |
+| PR Author             | restyled-io       | github-actions    |
+| Status avatar         | restyled-io       | github-actions    |
+| Status link (success) | Restyled PR       | Restyled Job      |
+| Status link           | Restyled Job      | Restyled Job      |
+| Manual patching       | `curl\|git am`    | `base64\|git am`  |
