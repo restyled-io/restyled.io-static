@@ -25,7 +25,7 @@ command to [apply the style-fixing commits directly to a local
 checkout][apply-locally].
 
 [actions-run]: https://github.com/restyled-io/actions/tree/main/run#readme
-[apply-locally]: /docs/applying-fixes-locally
+[apply-locally]: https://github.com/restyled-io/actions/wiki/Apply-Fixes-Locally
 
 **Open and extensible**: Restyled is a [collection of distinct and well-isolated
 open-source projects][org], each of which are easy to contribute to depending on

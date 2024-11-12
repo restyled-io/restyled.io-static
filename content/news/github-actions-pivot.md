@@ -77,4 +77,4 @@ description of what will be different post-migration.
 To my many users and contributors, thank you! Any questions, please
 [email](mailto:support@restyled.io).
 
-[migrating]: /docs/migrating-to-github-actions/
+[migrating]: https://github.com/restyled-io/actions/wiki/Migrating-from-the-Restyled-App
