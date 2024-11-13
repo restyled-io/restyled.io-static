@@ -142,6 +142,11 @@ section#restylers {
   }
 }
 
+.restyler-tag a {
+  font-size: 80%;
+  padding-left: 1em;
+}
+
 .test {
   border-radius: 5px;
   border: 1px solid #909090;

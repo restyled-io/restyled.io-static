@@ -67,10 +67,13 @@ function restylerTemplate(restyler: Restyler): string {
           <th>Languages</th>
           <td>${restyler.metadata.languages.join(", ")}</td>
         </tr>
-        <tr>
+        <tr class="restyler-tag">
           <th>Tag</th>
           <td>
             ${restyler.image.split(":").slice(-1)}
+            <a target="_blank" href="https://gallery.ecr.aws/restyled-io/restyler-${
+              restyler.name
+            }">see all</a>
           </td>
         </tr>
         <tr>
