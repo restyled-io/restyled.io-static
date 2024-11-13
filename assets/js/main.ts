@@ -33,28 +33,6 @@ function appendRestyler($section: HTMLElement, restyler: Restyler) {
     hljs.highlightElement(block);
   });
 
-  div.querySelectorAll("a.restyler-tags").forEach((el) => {
-    const a = el as HTMLAnchorElement;
-    const name = a.getAttribute("data-name");
-
-    if (name) {
-      a.onclick = async (e) => {
-        e.preventDefault();
-        a.innerHTML = "loading...";
-
-        const response = await fetch(`${docs}/restyler-tags?name=${name}`);
-
-        if (response.ok) {
-          const body: string[] = await response.json();
-          const x = document.createElement("div");
-          x.innerHTML = body.join("\n");
-          a.parentElement?.insertAdjacentElement("beforeend", x);
-          a.parentElement?.removeChild(a);
-        }
-      };
-    }
-  });
-
   const li = document.createElement("li");
   const anchor = document.createElement("a");
   anchor.href = `#${restyler.name}`;
@@ -93,9 +71,6 @@ function restylerTemplate(restyler: Restyler): string {
           <th>Tag</th>
           <td>
             ${restyler.image.split(":").slice(-1)}
-            <a class="restyler-tags" data-name=${
-              restyler.name
-            } href="#">[show all]</a>
           </td>
         </tr>
         <tr>
