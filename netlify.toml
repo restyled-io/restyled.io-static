@@ -11,6 +11,18 @@ HUGO_VERSION = "0.131.0"
 
 [[redirects]]
   from = "/available-restylers"
-  to = "/restylers"
+  to = "https://github.com/restyled-io/restylers/blob/main/_docs/restylers.md"
   status = 301
-  force = false
+  force = true
+
+[[redirects]]
+  from = "/restylers"
+  to = "https://github.com/restyled-io/restylers/blob/main/_docs/restylers.md"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "https://github.com/restyled-io"
+  status = 301
+  force = true
